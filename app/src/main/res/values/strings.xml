@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">We Care</string>
+
+    <string name="alert.api.211">Input fields missing</string>
+    <string name="alert.api.212">Session expired. Please relogin</string>
+    <string name="alert.unknown_error">Something went wrong. Please try again later.</string>
+    <string name="alert.network_error">A network error has occured.</string>
+    <string name="alert.common.suggestion">Network timeout. Please try again after some time.</string>
+    <string name="alert.network.ssl.error"></string>
+    <string name="alert.network.no.response.from.server" />
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Login with your card number</string>
+    <string name="title_activity_parent_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Name</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_child_login">Sign in</string>
+</resources>
