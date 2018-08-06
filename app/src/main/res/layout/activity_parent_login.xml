@@ -90,6 +90,7 @@
             </RadioGroup>
         </RelativeLayout>
         <Button
+            android:layout_margin="15dp"
             android:layout_gravity="center_horizontal"
             android:id="@+id/btn_signup"
             android:layout_width="150dp"
@@ -98,15 +99,7 @@
             android:background="@drawable/circ_button1"
             android:layout_marginTop="40dp"
             android:textColor="@android:color/white"/>
-        <Button
-            android:id="@+id/btn_link_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Another Parent"
-            android:layout_margin="10dp"
-            android:background="@drawable/circ_button1"
-            android:layout_marginTop="3dp"
-            android:textColor="#fff"/>
+
 
     </LinearLayout>
 
