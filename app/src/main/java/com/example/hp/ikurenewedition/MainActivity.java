@@ -3,9 +3,13 @@ package com.example.hp.ikurenewedition;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.example.hp.wecarenewedition.ParentLogin;
 import com.google.zxing.integration.android.IntentIntegrator;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     IntentIntegrator qrScan;
     int times =0;
     Intent i ;
-
+    FloatingActionButton floatingActionButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }, SPLASH_DISPLAY_LENGTH);
 
+
+        floatingActionButton = (FloatingActionButton)findViewById(R.id.floating);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(MainActivity.this, ParentLogin.class);
+                startActivity(k);
+            }
+        });
     }
 
 

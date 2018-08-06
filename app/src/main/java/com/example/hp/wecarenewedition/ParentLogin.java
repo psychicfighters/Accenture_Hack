@@ -104,7 +104,7 @@ public class ParentLogin extends AppCompatActivity {
 //        signupInputName.setText(savednotes.getString("tag", null));
 
         signupInputEmail = (EditText) findViewById(R.id.signup_input_email);
-        signupInputPassword = (EditText) findViewById(R.id.signup_input_password);
+        signupInputPassword = (EditText) findViewById(R.id.signup_input_address);
         signupInputAge = (EditText) findViewById(R.id.signup_input_age);
 
         btnSignUp = (Button) findViewById(R.id.btn_signup);

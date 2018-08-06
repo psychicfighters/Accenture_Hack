@@ -45,7 +45,7 @@ public class ChildLogin extends AppCompatActivity {
         signupInputName.setText(savednotes.getString("tag", null));
 
         signupInputName = (EditText) findViewById(R.id.signup_input_email);
-        signupInputToken = (EditText) findViewById(R.id.signup_input_password);
+
 
 
 
