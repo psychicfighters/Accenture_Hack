@@ -108,7 +108,7 @@ public class ParentLogin extends AppCompatActivity {
         signupInputAge = (EditText) findViewById(R.id.signup_input_age);
 
         btnSignUp = (Button) findViewById(R.id.btn_signup);
-        btnLinkLogin = (Button) findViewById(R.id.btn_link_login);
+
         genderRadioGroup = (RadioGroup) findViewById(R.id.gender_radio_group);
 
 

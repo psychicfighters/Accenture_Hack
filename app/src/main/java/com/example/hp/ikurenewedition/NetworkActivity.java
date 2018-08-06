@@ -3,6 +3,7 @@ package com.example.hp.ikurenewedition;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.example.hp.ikurenewedition.dataclass.Data_class;
 import com.example.hp.ikurenewedition.pojodatamodels.CardDetails;
 import com.example.hp.ikurenewedition.rest.ApiClient;
 import com.example.hp.ikurenewedition.rest.ApiInterface;
+import com.example.hp.wecarenewedition.ParentLogin;
 
 import java.util.ArrayList;
 
@@ -49,6 +51,16 @@ public class NetworkActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_network);
+
+        FloatingActionButton floatingActionButton;
+        floatingActionButton = findViewById(R.id.floating1);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(NetworkActivity.this, ParentLogin.class);
+                startActivity(k);
+            }
+        });
         Intent i = getIntent();
         patient = i.getStringExtra("Patient_no");
          card_no = (TextView)findViewById(R.id.serve1);

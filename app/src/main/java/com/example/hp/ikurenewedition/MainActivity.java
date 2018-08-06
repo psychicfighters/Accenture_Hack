@@ -15,11 +15,10 @@ import com.google.zxing.integration.android.IntentIntegrator;
 public class MainActivity extends AppCompatActivity {
 
     private static final long SPLASH_DISPLAY_LENGTH = 1500;
-    Button buttonScan;
-    IntentIntegrator qrScan;
+
     int times =0;
     Intent i ;
-    FloatingActionButton floatingActionButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,15 +38,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }, SPLASH_DISPLAY_LENGTH);
 
-
-        floatingActionButton = (FloatingActionButton)findViewById(R.id.floating);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent k = new Intent(MainActivity.this, ParentLogin.class);
-                startActivity(k);
-            }
-        });
     }
 
 
