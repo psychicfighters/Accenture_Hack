@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Welcome"
-    android:background="@drawable/ani_welcome"
-    >
+    android:background="@drawable/back">
 
     <ImageView
         android:layout_width="300dp"
@@ -16,7 +15,6 @@
         android:fitsSystemWindows="true"
         android:layout_marginTop="169dp"
         android:src="@drawable/wecarefinal" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

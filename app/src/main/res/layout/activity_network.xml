@@ -13,7 +13,6 @@
          android:layout_height="wrap_content"
         android:layout_below="@+id/image"
          android:layout_marginLeft="8dp"
-
          android:layout_marginRight="8dp"
          android:gravity="center_horizontal">
 
@@ -26,19 +25,15 @@
              android:text="Card Number:"
              android:textColor="#ffffff"
              android:textSize="20sp"
-             android:textStyle="bold"
-
-             />
+             android:textStyle="bold"/>
          <TextView
              android:id="@+id/serve1"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-
              android:layout_marginLeft="8dp"
              android:layout_marginTop="8dp"
              android:textColor="#FFFFFF"
-             android:textSize="20sp"
-             />
+             android:textSize="20sp"/>
 
      </LinearLayout>
 

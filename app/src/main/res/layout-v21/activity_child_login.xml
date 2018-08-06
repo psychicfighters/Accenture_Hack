@@ -8,7 +8,7 @@
     android:padding="10dp"
     android:gravity="center"
     tools:context="com.example.hp.wecarenewedition.ChildLogin"
-    android:background="@drawable/ani_login">
+    android:background="@drawable/back">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,12 +54,11 @@
 
 
         <Button
-
-            android:layout_marginStart="25dp"
             android:id="@+id/btn_link_Enter"
-            android:layout_width="fill_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/circ_button1"
             android:text="Enter"
             android:textColor="#fff" />

@@ -31,9 +31,9 @@
             fab:menu_animationDelayPerItem="50"
             fab:menu_backgroundColor="@android:color/transparent"
             fab:menu_buttonSpacing="0dp"
-            fab:menu_colorNormal="@color/colorPrimary"
-            fab:menu_colorPressed="@color/colorPrimaryDark"
-            fab:menu_colorRipple="@color/colorAccent"
+            fab:menu_colorNormal="@color/floating1"
+            fab:menu_colorPressed="@color/floating2"
+            fab:menu_colorRipple="@color/floating3"
             fab:menu_fab_size="normal"
             fab:menu_icon="@drawable/fab_add"
             fab:menu_openDirection="up"
@@ -50,9 +50,9 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/view"
                 app:fab_label="View"
-                fab:fab_colorNormal="@color/colorPrimary"
-                fab:fab_colorPressed="@color/colorPrimaryDark"
-                fab:fab_colorRipple="@color/colorAccent"
+                fab:fab_colorNormal="@color/floating1"
+                fab:fab_colorPressed="@color/floating2"
+                fab:fab_colorRipple="@color/floating3"
                 fab:fab_size="mini" />
 
             <com.github.clans.fab.FloatingActionButton
@@ -61,9 +61,9 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/printer"
                 app:fab_label="Print"
-                fab:fab_colorNormal="@color/colorPrimary"
-                fab:fab_colorPressed="@color/colorPrimaryDark"
-                fab:fab_colorRipple="@color/colorAccent"
+                fab:fab_colorNormal="@color/floating1"
+                fab:fab_colorPressed="@color/floating2"
+                fab:fab_colorRipple="@color/floating3"
                 fab:fab_size="mini" />
 
 

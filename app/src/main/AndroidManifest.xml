@@ -78,6 +78,7 @@
         </activity>
         <activity
             android:name=".OnePerson"
+            android:windowSoftInputMode="adjustPan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -166,7 +167,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.hp.wecarenewedition.ChildLogin" />
-        <activity android:name="com.example.hp.wecarenewedition.ParentLogin"></activity>
+        <activity android:name="com.example.hp.wecarenewedition.ParentLogin" />
     </application>
 
 </manifest>
