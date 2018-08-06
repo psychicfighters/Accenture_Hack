@@ -9,19 +9,32 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
 import com.example.hp.ikurenewedition.AfterSplash;
 import com.example.hp.ikurenewedition.MainActivity;
+import com.example.hp.ikurenewedition.NetworkActivity;
 import com.example.hp.ikurenewedition.R;
+import com.example.hp.ikurenewedition.RequestService;
+import com.example.hp.ikurenewedition.pojodatamodels.DataUpload;
+import com.example.hp.ikurenewedition.pojodatamodels.Register;
+import com.example.hp.ikurenewedition.pojodatamodels.SendData;
+import com.example.hp.ikurenewedition.pojodatamodels.SendRegister;
+import com.example.hp.ikurenewedition.rest.ApiClient;
+import com.example.hp.ikurenewedition.rest.ApiInterface1;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ParentLogin extends AppCompatActivity {
     private static final String TAG = "RegisterActivity";
@@ -33,23 +46,53 @@ public class ParentLogin extends AppCompatActivity {
     private Button btnSignUp;
     private Button btnLinkLogin;
     private RadioGroup genderRadioGroup;
+    private String name;
+    private String age;
+    private String email;
+    private String addr;
+    private String gender;
+    String token;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = pref.edit();
+////        editor.putString("token", "PA7646");
+////        editor.apply();
+//        editor.clear();
+//        editor.apply();
+         token = pref.getString("token", null);
+
         setContentView(R.layout.activity_parent_login);
+        Intent i = getIntent();
+        if(token == null){
+            display();
+        }
+        else{
+            Intent intent = new Intent(ParentLogin.this,NetworkActivity.class);
+            intent.putExtra("Patient_no", token);
+            startActivity(intent);
+        }
+
+
+    }
+
+    private void display() {
+
 
 
         //Skip button to be removed
 
-        Button btnParentLoginToHome = findViewById(R.id.btn_skip);
-        btnParentLoginToHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ParentLogin.this,AfterSplash.class);
-                startActivity(intent);
-            }
-        });
+//        Button btnParentLoginToHome = findViewById(R.id.btn_skip);
+//        btnParentLoginToHome.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(ParentLogin.this,AfterSplash.class);
+//                startActivity(intent);
+//            }
+//        });
 
         // Progress dialog
         progressDialog = new ProgressDialog(this);
@@ -57,8 +100,8 @@ public class ParentLogin extends AppCompatActivity {
         signupInputName = (EditText) findViewById(R.id.signup_input_name);
 
 
-        savednotes = getSharedPreferences("notes",MODE_PRIVATE);
-        signupInputName.setText(savednotes.getString("tag", null));
+//        savednotes = getSharedPreferences("notes",MODE_PRIVATE);
+//        signupInputName.setText(savednotes.getString("tag", null));
 
         signupInputEmail = (EditText) findViewById(R.id.signup_input_email);
         signupInputPassword = (EditText) findViewById(R.id.signup_input_password);
@@ -70,22 +113,75 @@ public class ParentLogin extends AppCompatActivity {
 
 
 
-
-
-        btnLinkLogin.setOnClickListener(new View.OnClickListener() {
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent i = new Intent(getApplicationContext(),ParentLogin.class);
-                startActivity(i);
+                name = signupInputName.getText().toString();
+                age = signupInputAge.getText().toString();
+                email = signupInputEmail.getText().toString();
+                addr = signupInputPassword.getText().toString();
+                int id = genderRadioGroup.getCheckedRadioButtonId();
+                RadioButton radioButton = (RadioButton) findViewById(id);
+                gender = radioButton.getText().toString();
+                callAPI(name, addr, age, email, gender, token);
             }
         });
     }
+
+    private void callAPI(String name, String addr, String age, String email, String gender, String token) {
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("Please Wait...."+'\n'+"We are figuring things out");
+        progressDialog.setCancelable(false);
+        //cardView1.setVisibility(View.GONE);
+        progressDialog.show();
+        SendRegister snd = new SendRegister();
+        snd.setName(name);
+        snd.setAddr(addr);
+        snd.setAge(age);
+        snd.setEmail(email);
+        snd.setGender(gender);
+        snd.setToken(token);
+
+        ApiInterface1 apiService = ApiClient.getClient().create(ApiInterface1.class);
+        Call<Register> call = apiService.regnew(snd);
+        call.enqueue(new Callback<Register>() {
+            @Override
+            public void onResponse(Call<Register> call, Response<Register> response) {
+//                if(response.body().getError()){
+//                    progressDialog.dismiss();
+//                    Toast.makeText(RequestService.this,"Couldn't be uploaded Try again",Toast.LENGTH_LONG).show();
+//                }
+
+                    progressDialog.dismiss();
+                    Toast.makeText(ParentLogin.this, "Uploaded successfully", Toast.LENGTH_LONG).show();
+                    SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("token", response.body().getResultToken());
+                    editor.apply();
+                    Intent i = new Intent(ParentLogin.this, NetworkActivity.class);
+                    //finish();
+                    String token = pref.getString("token", null);
+//                Toast.makeText(ParentLogin.this, token, Toast.LENGTH_LONG).show();
+                    i.putExtra("Patient_no", token);
+                    startActivity(i);
+
+
+            }
+
+            @Override
+            public void onFailure(Call<Register> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(ParentLogin.this,"Couldn't register try again!",Toast.LENGTH_LONG).show();
+
+            }
+        });
+    }
+
     private void makeTag(String tag){
         String or = savednotes.getString(tag, null);
         SharedPreferences.Editor preferencesEditor = savednotes.edit();
         preferencesEditor.putString("tag",tag); //change this line to this
-        preferencesEditor.commit();
+        preferencesEditor.apply();
     }
 
 

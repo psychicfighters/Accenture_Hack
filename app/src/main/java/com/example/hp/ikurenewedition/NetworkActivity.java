@@ -143,23 +143,23 @@ public class NetworkActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
 
     }
-    @Override
-    public void onBackPressed() {
-        //finish();
-        if(no_of_hits == 0){
-            no_of_hits ++;
-            Toast.makeText(NetworkActivity.this,"Hit once again to Exit",Toast.LENGTH_SHORT).show();
-
-        }
-        else if(no_of_hits > 0) {
-            dy = null;
-            notesAdapter = null;
-            //startActivity(new Intent(this,MainActivity.class));
-            //finish();
-            super.onBackPressed();
-        }
-
-    }
+//    @Override
+//    public void onBackPressed() {
+//        //finish();
+//        if(no_of_hits == 0){
+//            no_of_hits ++;
+//            Toast.makeText(NetworkActivity.this,"Hit once again to Exit",Toast.LENGTH_SHORT).show();
+//
+//        }
+//        else if(no_of_hits > 0) {
+//            dy = null;
+//            notesAdapter = null;
+//            //startActivity(new Intent(this,MainActivity.class));
+//            //finish();
+//            super.onBackPressed();
+//        }
+//
+//    }
     /*static  String getDateString(long millis){
         SimpleDateFormat format=new SimpleDateFormat("EEE, d MMM yyyy 'at' HH:mm:ss z");
         return format.format(millis);

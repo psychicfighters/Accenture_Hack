@@ -25,9 +25,9 @@ import retrofit2.http.Query;
  */
 
 public interface ApiInterface {
-    @GET("patient/patientlist")
+    @GET("user")
 //    @FormUrlEncoded
-    Call<CardDetails> getDetails(@Query("card") String format);
+    Call<CardDetails> getDetails(@Query("token") String format);
 
     @GET("patient/patientdetails")
     Call<PatientDetails> getDetails2(@Query("pid") String pid);
