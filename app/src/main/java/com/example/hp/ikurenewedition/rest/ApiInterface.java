@@ -32,32 +32,32 @@ public interface ApiInterface {
     @GET("patient/patientdetails")
     Call<PatientDetails> getDetails2(@Query("pid") String pid);
 
-    @GET("prescription/prescriptionlist")
+    @GET("prescriptionlist")
     Call<PresListDetail> getDetails3(@Query("pid") String pid);
 
-    @GET("prescription/prescriptiondetails")
+    @GET("presimage")
     Call<ShowTheImage> getDetails4(@Query("id") String pid);
 
-    @GET("ecg/ecglist")
+    @GET("ecglist")
     Call<EcgListDetail> getDetails5(@Query("pid") String pid);
 
-    @GET("ecg/ecgdetails")
+    @GET("ecgimage")
     Call<ShowTheEcg> getDetails6(@Query("id") String pid);
 
-    @GET("vital/vitallist")
+    @GET("vitallist")
     Call<VitalTime> getDetails7(@Query("pid") String pid);
 
-    @GET("vital/vitaldetails")
+    @GET("vitaldetails")
     Call<DifferentVitals> getDetails8(@Query("pid") String pid,
                                       @Query("timestamp") String timestamp);
 
-    @GET("vital/sugarlist")
+    @GET("sugarlist")
     Call<SugarDetail> getDetails9(@Query("pid") String pid);
 
-    @GET("vital/bplist")
+    @GET("bplist")
     Call<BPDetails> getDetails10(@Query("pid") String pid);
 
-    @GET("vital/checkuprequestlist")
+    @GET("checkuprequestlist")
     Call<CheckupDetails> getDetails11(@Query("pid") String pid);
 
     @GET("vital/vitalsrequestdetails")

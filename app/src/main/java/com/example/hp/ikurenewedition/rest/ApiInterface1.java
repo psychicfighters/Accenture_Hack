@@ -24,10 +24,10 @@ public interface ApiInterface1 {
     @Headers({"Content-Type: application/json"})
     @POST("register")
     Call<Register> regnew(@Body SendRegister data);
-    @POST("vital/createcheckuprequest")
+    @POST("checkuprequest")
     Call<DataUpload> savePost(@Body SendData data);
 
-    @POST("vital/editrequeststatus")
+    @POST("checkupdone")
     Call<DataUpload> savePost2(@Body ConfirmService data);
 
 }

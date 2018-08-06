@@ -52,11 +52,13 @@ public class ParentLogin extends AppCompatActivity {
     private String addr;
     private String gender;
     String token;
+    private boolean status;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Intent intent_get = getIntent();
+        int ext = intent_get.getIntExtra("val", 100);
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         SharedPreferences.Editor editor = pref.edit();
 ////        editor.putString("token", "PA7646");
@@ -68,14 +70,23 @@ public class ParentLogin extends AppCompatActivity {
         setContentView(R.layout.activity_parent_login);
         Intent i = getIntent();
         if(token == null){
+            status = true;
             display();
         }
-        else{
+        else if(token != null && ext == 100){
             Intent intent = new Intent(ParentLogin.this,NetworkActivity.class);
             intent.putExtra("Patient_no", token);
             startActivity(intent);
         }
 
+        if(ext == 0){
+            Toast.makeText(ParentLogin.this, "here", Toast.LENGTH_LONG).show();
+
+            status = false;
+            display();
+            intent_get = null;
+
+        }
 
     }
 
@@ -158,12 +169,17 @@ public class ParentLogin extends AppCompatActivity {
                     SharedPreferences.Editor editor = pref.edit();
                     editor.putString("token", response.body().getResultToken());
                     editor.apply();
-                    Intent i = new Intent(ParentLogin.this, NetworkActivity.class);
-                    //finish();
-                    String token = pref.getString("token", null);
+                    if(status) {
+                        Intent i = new Intent(ParentLogin.this, NetworkActivity.class);
+                        //finish();
+                        String token = pref.getString("token", null);
 //                Toast.makeText(ParentLogin.this, token, Toast.LENGTH_LONG).show();
-                    i.putExtra("Patient_no", token);
-                    startActivity(i);
+                        i.putExtra("Patient_no", token);
+                        startActivity(i);
+                    }
+                    else{
+                        finish();
+                    }
 
 
             }

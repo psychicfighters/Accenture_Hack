@@ -58,6 +58,7 @@ public class NetworkActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onClick(View view) {
                 Intent k = new Intent(NetworkActivity.this, ParentLogin.class);
+                k.putExtra("val", 0);
                 startActivity(k);
             }
         });
