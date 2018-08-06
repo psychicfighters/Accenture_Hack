@@ -26,15 +26,6 @@ public class ChildLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child_login);
 
-        //Skip Button to be removed
-        Button btnParentLoginToHome = findViewById(R.id.btn_skip);
-        btnParentLoginToHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ChildLogin.this,AfterSplash.class);
-                startActivity(intent);
-            }
-        });
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
