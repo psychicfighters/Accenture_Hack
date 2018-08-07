@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.hp.wecarenewedition.ChildLogin;
 import com.example.hp.wecarenewedition.ParentLogin;
+import com.example.hp.wecarenewedition.Volunteer_login;
 import com.google.zxing.integration.android.IntentIntegrator;
 
 public class Welcome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +54,14 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Welcome.this,ChildLogin.class);
+                startActivity(intent);
+            }
+        });
+        Button btnWelcomeToVolunteerLogin = findViewById(R.id.button3);
+        btnWelcomeToVolunteerLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Welcome.this,Volunteer_login.class);
                 startActivity(intent);
             }
         });

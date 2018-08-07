@@ -38,7 +38,6 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         />
-
     <Button
         android:id="@+id/button2"
         android:layout_width="140dp"
@@ -51,7 +50,6 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         />
-
     <Button
         android:id="@+id/button3"
         android:layout_width="140dp"
@@ -63,5 +61,4 @@
         android:text="Volunteer"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
-
 </RelativeLayout>
