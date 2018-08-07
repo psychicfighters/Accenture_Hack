@@ -76,6 +76,7 @@ public class ParentLogin extends AppCompatActivity {
         else if(token != null && ext == 100){
             Intent intent = new Intent(ParentLogin.this,NetworkActivity.class);
             intent.putExtra("Patient_no", token);
+            intent.putExtra("from", "parent");
             startActivity(intent);
         }
 

@@ -55,8 +55,12 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
     ArrayList<Data_class> dy = new ArrayList<Data_class>();
     private CardView mCardView;
     private boolean start;
-    private String from;
+    private String from = " ";
     private String m_Text;
+    private String data;
+    private String name;
+    private String url;
+    private String org;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,8 +144,9 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                     if (result != null) {
                         if (result.body().getPatientlist().size() > 0) {
                             for (int i = 0; i < result.body().getPatientlist().size(); i++) {
-                                String data = result.body().getPatientlist().get(i).getPid();
-                                if(from.equals("parent") || from.equals("parent"))
+                                org = result.body().getPatientlist().get(i).getPid();
+                                data = result.body().getPatientlist().get(i).getPid();
+                                if(from.equals("child") || from.equals("vol"))
                                     data = "---";
                                 dy.add(i, new Data_class(data,
                                         result.body().getPatientlist().get(i).getName(),
@@ -163,8 +168,8 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                             @Override
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                 //Toast.makeText(List_display.this,"Hello",Toast.LENGTH_SHORT).show();
-                                String url = result.body().getPatientlist().get(position).getPid();
-                                String name = result.body().getPatientlist().get(position).getName();
+                                url = result.body().getPatientlist().get(position).getPid();
+                                name = result.body().getPatientlist().get(position).getName();
                                 Intent k = null;
                                 if(from.equals("parent")) {
                                     k = new Intent(NetworkActivity.this, OnePerson.class);
@@ -174,6 +179,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                                     startActivity(k);
                                     overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
                                 }
+                                //Toast.makeText(NetworkActivity.this, "here", Toast.LENGTH_LONG).show();
                                 if(from.equals("child")) {
 
 
@@ -191,6 +197,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             m_Text = input.getText().toString();
+                                            execute();
                                         }
                                     });
                                     builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -202,17 +209,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
 
                                     builder.show();
 
-                                    if(m_Text.equals(result.body().getPatientlist().get(position).getPid())){
-                                        k = new Intent(NetworkActivity.this, ChildViewActivity.class);
-                                        k.putExtra("patient", url);
-                                        k.putExtra("card_no", patient);
-                                        k.putExtra("patient_name", name);
-                                        startActivity(k);
-                                        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
-                                    }
-                                    else {
-                                        Toast.makeText(NetworkActivity.this, "Wrong Credentials", Toast.LENGTH_LONG).show();
-                                    }
+
                                     }
                                 if(from.equals("vol")) {
                                     k = new Intent(NetworkActivity.this, VolunteerActivity.class);
@@ -244,7 +241,22 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
         });
     }
 
+void execute(){
+    if(m_Text.equals(org)){
 
+        Intent k;
+        k = new Intent(NetworkActivity.this, ChildViewActivity.class);
+        k.putExtra("patient", url);
+        k.putExtra("card_no", patient);
+        k.putExtra("patient_name", name);
+        startActivity(k);
+        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+    }
+    else {
+
+        Toast.makeText(NetworkActivity.this, "Wrong Credentials", Toast.LENGTH_LONG).show();
+    }
+}
 
 
 
