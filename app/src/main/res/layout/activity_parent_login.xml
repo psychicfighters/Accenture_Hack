@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:gravity="center"
-    android:background="@drawable/back"
+    android:background="@drawable/back4"
     tools:context="com.example.hp.wecarenewedition.ParentLogin">
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,6 +24,7 @@
                 android:id="@+id/signup_input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:ems="10"
                 android:hint="Name"/>
             <EditText
@@ -43,6 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:inputType="textLongMessage"
                 android:hint="Address" />
 
 
@@ -52,12 +54,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:inputType="number"
                 android:hint="Age"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp">
+            android:paddingTop="20dp"
+            android:layout_margin="15dp">
             <TextView
                 android:id="@+id/gender_textview"
                 android:paddingRight="15dp"
@@ -66,7 +70,6 @@
                 android:text="Gender"
                 android:textColor="#000"
                 android:textSize="20dp"/>
-
             <RadioGroup
                 android:id="@+id/gender_radio_group"
                 android:layout_width="wrap_content"

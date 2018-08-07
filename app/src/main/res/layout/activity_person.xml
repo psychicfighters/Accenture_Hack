@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@drawable/ani_mainpage"
+    android:background="@drawable/abstractfront"
     tools:context="com.example.hp.ikurenewedition.OnePerson">
     <LinearLayout
         android:layout_width="match_parent"

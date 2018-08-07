@@ -8,8 +8,7 @@
     android:padding="10dp"
     android:gravity="center"
     tools:context="com.example.hp.wecarenewedition.ChildLogin"
-    android:background="@drawable/back">
-
+    android:background="@drawable/back4">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Welcome"
-    android:background="@drawable/back">
+    android:background="@drawable/back4">
 
     <ImageView
         android:layout_width="300dp"
@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="222dp"
         android:text="Where would you like to go?"
-        android:textColor="#fff"
+        android:textColor="#007cb6"
         android:textSize="22sp"
         android:textStyle="bold" />
 
@@ -51,5 +51,17 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/circ_button1"
+        android:text="Volunteer"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
 </RelativeLayout>

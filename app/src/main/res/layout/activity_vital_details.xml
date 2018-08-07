@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@drawable/ani_mainpage"
+    android:background="@drawable/abstractfront"
     android:id="@+id/relative">
 
     <TextView

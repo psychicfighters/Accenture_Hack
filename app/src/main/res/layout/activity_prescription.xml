@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ani_mainpage"
+    android:background="@drawable/abstractfront"
     android:orientation="vertical">
 <TextView
     android:id="@+id/header"
@@ -23,13 +24,12 @@
 
         <ListView
             android:id="@+id/list_of_pres"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/header"
-    android:divider="@null"
-    android:dividerHeight="0dp">
-
-</ListView>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:divider="@null"
+            android:dividerHeight="0dp">
+        </ListView>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

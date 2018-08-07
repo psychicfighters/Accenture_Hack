@@ -134,7 +134,35 @@ public class ParentLogin extends AppCompatActivity {
                 int id = genderRadioGroup.getCheckedRadioButtonId();
                 RadioButton radioButton = (RadioButton) findViewById(id);
                 gender = radioButton.getText().toString();
+
+                if(name.equalsIgnoreCase(""))
+                {
+                    signupInputName.setHint("Please enter Name");//it gives user to hint
+                    signupInputName.setError("Please enter username");//it gives user to info message //use any one //
+                }
+
+                else if(age.equalsIgnoreCase(""))
+                {
+                    signupInputAge.setHint("Please enter Age");//it gives user to hint
+                    signupInputAge.setError("Please enter Age");//it gives user to info message //use any one //
+                }
+
+                else if(email.equalsIgnoreCase(""))
+                {
+                    signupInputEmail.setHint("Please enter Email id");//it gives user to hint
+                    signupInputEmail.setError("Please enter Email Id");//it gives user to info message //use any one //
+                }
+
+                else if(addr.equalsIgnoreCase(""))
+                {
+                    signupInputPassword.setHint("Please enter your Address");//it gives user to hint
+                    signupInputPassword.setError("Please enter your Address");//it gives user to info message //use any one //
+                }
+
+               else
                 callAPI(name, addr, age, email, gender, token);
+
+
             }
         });
     }

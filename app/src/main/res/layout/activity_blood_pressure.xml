@@ -4,7 +4,7 @@
     xmlns:fab="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ani_mainpage"
+    android:background="@drawable/abstractfront"
     android:orientation="vertical">
 
     <TextView
