@@ -35,6 +35,7 @@ public class Volunteer_login extends AppCompatActivity {
                     Intent intent = new Intent(Volunteer_login.this, NetworkActivity.class);
                     intent.putExtra("from", "vol");
                     intent.putExtra("Patient_no", token);
+                    finish();
                     startActivity(intent);
 
                 }

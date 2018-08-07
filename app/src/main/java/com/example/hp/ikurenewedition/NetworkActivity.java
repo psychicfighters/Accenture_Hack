@@ -49,6 +49,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
     ArrayList<Data_class> dy = new ArrayList<Data_class>();
     private CardView mCardView;
     private boolean start;
+    private String from;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +68,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
         });
         Intent i = getIntent();
         patient = i.getStringExtra("Patient_no");
+        from  = i.getStringExtra("from");
         card_no = (TextView) findViewById(R.id.serve1);
         card_no.setText(patient);
         //Toast.makeText(this, patient, Toast.LENGTH_LONG).show();
@@ -97,10 +99,10 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
         callAPI1();
     }
     public void bullshit(){
-        Toast.makeText(NetworkActivity.this,"No Registered Patients found \nCheck Your Connection And Try again",Toast.LENGTH_LONG).show();
-        Intent i=new Intent(NetworkActivity.this,MainActivity.class);
+//        Toast.makeText(NetworkActivity.this,"No Registered Patients found \nCheck Your Connection And Try again",Toast.LENGTH_LONG).show();
+//        Intent i=new Intent(NetworkActivity.this,MainActivity.class);
         finish();
-        startActivity(i);
+        //startActivity(i);
 
     }
     private void callAPI1(){
@@ -153,7 +155,17 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                                 //Toast.makeText(List_display.this,"Hello",Toast.LENGTH_SHORT).show();
                                 String url = result.body().getPatientlist().get(position).getPid();
                                 String name = result.body().getPatientlist().get(position).getName();
-                                Intent k = new Intent(NetworkActivity.this, OnePerson.class);
+                                Intent k = null;
+                                if(from.equals("parent")) {
+                                    k = new Intent(NetworkActivity.this, OnePerson.class);
+                                }
+                                if(from.equals("child")) {
+                                    k = new Intent(NetworkActivity.this, ChildViewActivity.class);
+                                }
+                                if(from.equals("vol")) {
+                                    k = new Intent(NetworkActivity.this, VolunteerActivity.class);
+                                }
+
                                 //String str = Integer.toString(position);
                                 k.putExtra("patient", url);
                                 k.putExtra("card_no", patient);
