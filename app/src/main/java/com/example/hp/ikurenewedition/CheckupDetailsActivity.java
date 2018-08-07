@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.hp.ikurenewedition.R;
 import com.example.hp.ikurenewedition.adapters.CheckupStatusAdapter;
 import com.example.hp.ikurenewedition.adapters.SugarAdapter;
 import com.example.hp.ikurenewedition.dataclass.Data_class_four;

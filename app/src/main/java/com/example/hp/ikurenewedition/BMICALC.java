@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.example.hp.ikurenewedition.R;
+
 
 /**
  * Created by hp on 01-02-2018.

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
+import com.example.hp.ikurenewedition.R;
 import com.example.hp.ikurenewedition.fragments.BloodPressureFragment;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
