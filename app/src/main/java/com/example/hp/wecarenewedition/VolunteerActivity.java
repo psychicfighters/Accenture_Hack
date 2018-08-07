@@ -14,10 +14,14 @@ import com.google.zxing.integration.android.IntentIntegrator;
 
 public class VolunteerActivity extends AppCompatActivity {
 
+    private String pid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volunteer);
+        Intent intent = getIntent();
+        pid = intent.getStringExtra("patient");
 
         Button buttonprescription = findViewById(R.id.submit5);
         buttonprescription.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +37,7 @@ public class VolunteerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(VolunteerActivity.this, BloodPressure.class);
+                intent.putExtra("patient", pid);
                 startActivity(intent);
 
             }
@@ -42,6 +47,7 @@ public class VolunteerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(VolunteerActivity.this, BloodSugar.class);
+                intent.putExtra("patient", pid);
                 startActivity(intent);
 
             }
