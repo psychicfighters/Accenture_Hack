@@ -19,8 +19,7 @@ public class VolunteerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volunteer);
 
-
-        Button buttonprescription = findViewById(R.id.btn_prescription);
+        Button buttonprescription = findViewById(R.id.submit5);
         buttonprescription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,7 +28,7 @@ public class VolunteerActivity extends AppCompatActivity {
 
             }
         });
-        Button buttonbp = findViewById(R.id.btn_bp);
+        Button buttonbp = findViewById(R.id.submit2);
         buttonbp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +37,7 @@ public class VolunteerActivity extends AppCompatActivity {
 
             }
         });
-        Button buttonsugar = findViewById(R.id.btn_sugar);
+        Button buttonsugar = findViewById(R.id.submit3);
         buttonsugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +46,7 @@ public class VolunteerActivity extends AppCompatActivity {
 
             }
         });
-        Button buttonvital = findViewById(R.id.btn_vital);
+        Button buttonvital = findViewById(R.id.submit4);
         buttonvital.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +55,7 @@ public class VolunteerActivity extends AppCompatActivity {
 
             }
         });
-        Button buttonecg = findViewById(R.id.btn_ecg);
+        Button buttonecg = findViewById(R.id.submit1);
         buttonecg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
