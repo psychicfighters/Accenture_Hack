@@ -1,5 +1,6 @@
 package com.example.hp.wecarenewedition;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class BloodSugar extends AppCompatActivity {
     private String random;
     private String pp;
     private String fasting;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +82,17 @@ public class BloodSugar extends AppCompatActivity {
         sendData.setSugarPp(pp);
         sendData.setSugarRandom(random);
 
+        progressDialog = new ProgressDialog(BloodSugar.this);
+        progressDialog.setMessage("Please Wait...." + '\n' + "We are figuring things out");
+        progressDialog.setCancelable(false);
+
+
         ApiInterface1 apiService = ApiClient.getClient().create(ApiInterface1.class);
         retrofit2.Call<SugarUploadResult> call = apiService.sugarupload(sendData);
         call.enqueue(new Callback<SugarUploadResult>() {
             @Override
             public void onResponse(retrofit2.Call<SugarUploadResult> call, Response<SugarUploadResult> response) {
+                progressDialog.dismiss();
                 if(!response.body().getError())
                     Toast.makeText(BloodSugar.this, "Uploaded Successfully!", Toast.LENGTH_LONG).show();
                     finish();
@@ -92,6 +100,7 @@ public class BloodSugar extends AppCompatActivity {
 
             @Override
             public void onFailure(retrofit2.Call<SugarUploadResult> call, Throwable t) {
+                progressDialog.dismiss();
                 Toast.makeText(BloodSugar.this, "Sorry Couldn't be Uploaded!", Toast.LENGTH_LONG).show();
             }
         });

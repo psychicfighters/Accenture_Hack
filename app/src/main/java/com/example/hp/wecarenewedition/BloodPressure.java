@@ -1,5 +1,6 @@
 package com.example.hp.wecarenewedition;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class BloodPressure extends AppCompatActivity {
     private String diastolic;
     private String systolic;
     private String pid;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,19 +68,27 @@ public class BloodPressure extends AppCompatActivity {
         sendData.setDia(diastolic);
         sendData.setSys(systolic);
 
+        progressDialog = new ProgressDialog(BloodPressure.this);
+        progressDialog.setMessage("Please Wait...." + '\n' + "We are figuring things out");
+        progressDialog.setCancelable(false);
+
+
         ApiInterface1 apiService = ApiClient.getClient().create(ApiInterface1.class);
         Call<BpUploadResult> call = apiService.bpupload(sendData);
 
         call.enqueue(new Callback<BpUploadResult>() {
             @Override
             public void onResponse(Call<BpUploadResult> call, Response<BpUploadResult> response) {
-                if(!response.body().getError())
+                progressDialog.dismiss();
+                if(!response.body().getError()) {
                     Toast.makeText(BloodPressure.this, "Uploaded Successfully!", Toast.LENGTH_LONG).show();
-                finish();
+                    finish();
+                }
             }
 
             @Override
             public void onFailure(Call<BpUploadResult> call, Throwable t) {
+                progressDialog.dismiss();
                 Toast.makeText(BloodPressure.this, "Sorry Couldn't be Uploaded!", Toast.LENGTH_LONG).show();
             }
         });

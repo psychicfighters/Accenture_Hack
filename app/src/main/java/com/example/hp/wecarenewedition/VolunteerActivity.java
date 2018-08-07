@@ -57,6 +57,7 @@ public class VolunteerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(VolunteerActivity.this, VitalReports.class);
+                intent.putExtra("patient", pid);
                 startActivity(intent);
 
             }

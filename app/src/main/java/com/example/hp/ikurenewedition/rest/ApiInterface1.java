@@ -9,6 +9,7 @@ import com.example.hp.ikurenewedition.pojodatamodels.SendData;
 import com.example.hp.ikurenewedition.pojodatamodels.SendRegister;
 import com.example.hp.ikurenewedition.pojodatamodels.SugarUpload;
 import com.example.hp.ikurenewedition.pojodatamodels.SugarUploadResult;
+import com.example.hp.ikurenewedition.pojodatamodels.VitalUpload;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -34,6 +35,10 @@ public interface ApiInterface1 {
 
     @POST("uploadsugar")
     Call<SugarUploadResult> sugarupload(@Body SugarUpload data);
+
+    @POST("uploadvitals")
+    Call<SugarUploadResult> vitalupload(@Body VitalUpload data);
+
 
 
     @POST("checkuprequest")
