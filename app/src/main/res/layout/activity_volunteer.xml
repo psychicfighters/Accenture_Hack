@@ -27,7 +27,10 @@
                     android:id="@+id/image1"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:src="@drawable/ecgtest"/>
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ecgmachine"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
@@ -81,7 +84,10 @@
                     android:id="@+id/image2"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:src="@drawable/bptest"/>
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/bpreoport"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
@@ -124,7 +130,10 @@
                     android:id="@+id/image3"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:src="@drawable/sugartest"/>
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/sugarreport"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
@@ -165,7 +174,7 @@
                     android:id="@+id/image4"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:src="@drawable/vitaltest"/>
+                    android:src="@drawable/vitals"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
