@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vitaltest"
+    android:layout_gravity="center"
+    tools:context="com.example.hp.wecarenewedition.VitalReports">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        >
+        <EditText
+            android:layout_margin="25dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#000"
+            android:inputType="number"
+            android:hint="Height" />
+        <EditText
+            android:layout_margin="25dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#000"
+            android:inputType="number"
+            android:hint="Weight" />
+        <EditText
+            android:layout_margin="25dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="#000"
+            android:inputType="number"
+            android:hint="temperature" />
+        <Button
+            android:layout_margin="15dp"
+            android:id="@+id/btnEnter3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circ_button1"
+            android:text="Enter"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

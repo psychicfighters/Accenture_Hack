@@ -10,7 +10,56 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
+        <Button
+            android:id="@+id/btn_prescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:text="Prescription"
+            android:textColor="#6c0108"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:background="@drawable/prescription_icon"/>
+        <Button
+            android:id="@+id/btn_bp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:text="Blood Pressure"
+            android:textColor="#000"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:background="@drawable/blood"/>
+        <Button
+            android:id="@+id/btn_sugar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:text="Blood Sugar"
+            android:textColor="#000"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:background="@drawable/sugar1"/>
+        <Button
+            android:id="@+id/btn_vital"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:text="Vital Reports"
+            android:textColor="#000"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:background="@drawable/vital"/>
+        <Button
+            android:id="@+id/btn_ecg"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:text="Ecg Reports"
+            android:textColor="#000"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:background="@drawable/ecg1"/>
 
     </LinearLayout>
 
