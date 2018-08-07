@@ -165,7 +165,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hp.wecarenewedition.ChildLogin" />
+        <activity android:name="com.example.hp.wecarenewedition.ChildLogin"
+            android:noHistory="true"/>
         <activity
             android:name="com.example.hp.wecarenewedition.ParentLogin"
             android:noHistory="true" />

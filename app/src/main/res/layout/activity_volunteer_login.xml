@@ -37,16 +37,7 @@
             android:background="@drawable/circ_button1"
             android:text="Enter"
             android:textColor="#fff" />
-        <Button
-            android:layout_margin="15dp"
-            android:id="@+id/skip"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:background="@color/zxing_transparent"
-            android:text="skip"
-            android:textColor="#000" />
+
     </LinearLayout>
 
 

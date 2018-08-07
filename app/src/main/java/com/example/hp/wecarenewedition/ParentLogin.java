@@ -203,6 +203,7 @@ public class ParentLogin extends AppCompatActivity {
                         String token = pref.getString("token", null);
 //                Toast.makeText(ParentLogin.this, token, Toast.LENGTH_LONG).show();
                         i.putExtra("Patient_no", token);
+                        i.putExtra("from", "parent");
                         startActivity(i);
                     }
                     else{
