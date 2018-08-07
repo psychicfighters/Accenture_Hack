@@ -80,7 +80,7 @@ public class ParentLogin extends AppCompatActivity {
         }
 
         if(ext == 0){
-            Toast.makeText(ParentLogin.this, "here", Toast.LENGTH_LONG).show();
+            //Toast.makeText(ParentLogin.this, "here", Toast.LENGTH_LONG).show();
 
             status = false;
             display();
