@@ -29,6 +29,7 @@ import com.example.hp.wecarenewedition.ParentLogin;
 import com.example.hp.wecarenewedition.VolunteerActivity;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -66,9 +67,15 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_network);
+        Intent i = getIntent();
+        patient = i.getStringExtra("Patient_no");
+        from  = i.getStringExtra("from");
+
 
         FloatingActionButton floatingActionButton;
         floatingActionButton = findViewById(R.id.floating1);
+        if(Objects.equals(from, "child") || Objects.equals(from, "vol"))
+            floatingActionButton.setVisibility(View.GONE);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,9 +84,6 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                 startActivity(k);
             }
         });
-        Intent i = getIntent();
-        patient = i.getStringExtra("Patient_no");
-        from  = i.getStringExtra("from");
         card_no = (TextView) findViewById(R.id.serve1);
         card_no.setText(patient);
         //Toast.makeText(this, patient, Toast.LENGTH_LONG).show();
