@@ -26,7 +26,7 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sugar Report Lsat Time"
+                android:text="Sugar Report Last Time"
                 android:textColor="#000"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -137,7 +137,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pressure"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="#000"/>
 
@@ -340,7 +340,7 @@
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="225dp"
+            android:layout_height="250dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="5dp">
             <LinearLayout
