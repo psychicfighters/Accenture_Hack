@@ -25,7 +25,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Height" />
+            android:hint="Height(cm)" />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -36,7 +36,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Weight" />
+            android:hint="Weight(Kg)" />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -47,7 +47,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="temperature" />
+            android:hint="Temperature(°F)" />
         <Button
             android:layout_margin="15dp"
             android:id="@+id/btnEnter3"

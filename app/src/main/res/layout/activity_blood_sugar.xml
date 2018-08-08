@@ -25,7 +25,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Fasting" />
+            android:hint="Fasting(mg/dl)" />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -36,7 +36,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Postprandial " />
+            android:hint="Post Prandial(mg/dl) " />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -47,7 +47,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Random" />
+            android:hint="Random(mg/dl)" />
 
 
         <Button

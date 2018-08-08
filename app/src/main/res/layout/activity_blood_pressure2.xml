@@ -26,7 +26,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Systolic" />
+            android:hint="Systolic(mm of Hg)" />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -37,7 +37,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Diastolic" />
+            android:hint="Diastolic(mm of Hg)" />
 
 
         <Button
