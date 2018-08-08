@@ -23,6 +23,27 @@ public class VolunteerActivity extends AppCompatActivity {
         Intent intent = getIntent();
         pid = intent.getStringExtra("patient");
 
+        //capture ecg
+        Button buttonecgCaptur = findViewById(R.id.capture1);
+        buttonecgCaptur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VolunteerActivity.this, VolunteerActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        //capture prescription
+        Button buttonprescriptionCapture = findViewById(R.id.capture2);
+        buttonprescriptionCapture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VolunteerActivity.this, VolunteerActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
         Button buttonprescription = findViewById(R.id.submit5);
         buttonprescription.setOnClickListener(new View.OnClickListener() {
             @Override

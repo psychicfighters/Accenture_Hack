@@ -32,7 +32,7 @@ import java.util.Collections;
  * Created by hp on 10-02-2018.
  */
 
-public class Blood_Pressure_Graph extends AppCompatActivity implements OnChartGestureListener, OnChartValueSelectedListener {
+public class Blood_Pressure_Graph extends AppCompatActivity implements OnChartGestureListener,OnChartValueSelectedListener {
     // private String[] timestamp = new String[5];
     // private String[] systolic = new String[5];
     // private String[] diastolic = new String[5];
@@ -282,6 +282,8 @@ public class Blood_Pressure_Graph extends AppCompatActivity implements OnChartGe
                 + ", ymin: " + mChart.getYChartMin()
                 + ", ymax: " + mChart.getYChartMax());
     }
+
+
 
     @Override
     public void onNothingSelected() {

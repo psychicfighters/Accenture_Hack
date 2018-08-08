@@ -25,32 +25,29 @@ public class ChildViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_child_view);
 
         mFastingBarChat = (HorizontalBarChart)findViewById(R.id.sugar_fasting);
-        setFastingData();
-        //mPpBarChat = (HorizontalBarChart)findViewById(R.id.sugar_pp);
-       // setPpData();
-        //mRandomBarChat = (HorizontalBarChart)findViewById(R.id.sugar_random);
+        ArrayList<String>sugarFastingChart = new ArrayList<String>();
+        //setFastingData();
+        mPpBarChat = (HorizontalBarChart)findViewById(R.id.sugar_pp);
+        //setPpData();
+        mRandomBarChat = (HorizontalBarChart)findViewById(R.id.sugar_random);
         //setRandomData();
-       // mSystolicBarChat = (HorizontalBarChart)findViewById(R.id.pressure_systolic);
+        mSystolicBarChat = (HorizontalBarChart)findViewById(R.id.pressure_systolic);
         //setSystolicData();
-        //mDiastolicBarChart = (HorizontalBarChart)findViewById(R.id.pressure_diastolic);
+        mDiastolicBarChart = (HorizontalBarChart)findViewById(R.id.pressure_diastolic);
         //setDiastolicData();
 
     }
-    private void setFastingData() {
+    /*private void setFastingData() {
         float barWidth = 9f;
         float spaceforBar = 10f;
-        ArrayList<BarEntry> sugarFasting = new ArrayList<>();
-        for (int i = 0; i <= 1; i++) {
-            float val = (float) (Math.random() * 50);
-            sugarFasting.add(new BarEntry(i*spaceforBar, (int) val));
-        }
-        BarDataSet set1;
-        set1 = new BarDataSet(sugarFasting,"mm/dl");
-        BarData data = new BarData((List<String>) set1);
+        ArrayList<String> sugarFasting = new ArrayList<String>();
+        sugarFasting.add("100");
+        BarDataSet barDataSet = new BarDataSet(sugarFasting,"mm/dl");
+        BarData data = new BarData(sugarFasting,);
 
-        mFastingBarChat.setData(data);
+
     }
-    /*private void setPpData() {
+    private void setPpData() {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<BarEntry> sugarFasting = new ArrayList<>();
@@ -60,7 +57,8 @@ public class ChildViewActivity extends AppCompatActivity {
         }
         BarDataSet set2;
         set2 = new BarDataSet(sugarFasting,"mm/dl");
-        BarData data = new BarData((List<String>) set2);
+        BarData data = new BarData(set2);
+        data.setBarWidth(barWidth);
         mPpBarChat.setData(data);
     }
     private void setRandomData() {
@@ -73,7 +71,8 @@ public class ChildViewActivity extends AppCompatActivity {
         }
         BarDataSet set3;
         set3 = new BarDataSet(sugarFasting,"mm/dl");
-        BarData data = new BarData((List<String>) set3);
+        BarData data = new BarData(set3);
+        data.setBarWidth(barWidth);
         mRandomBarChat.setData(data);
     }
     private void setSystolicData() {
@@ -86,7 +85,8 @@ public class ChildViewActivity extends AppCompatActivity {
         }
         BarDataSet set4;
         set4 = new BarDataSet(sugarFasting,"mm/dl");
-        BarData data = new BarData((List<String>) set4);
+        BarData data = new BarData(set4);
+        data.setBarWidth(barWidth);
         mSystolicBarChat.setData(data);
     }
     private void setDiastolicData() {
@@ -99,7 +99,8 @@ public class ChildViewActivity extends AppCompatActivity {
         }
         BarDataSet set5;
         set5 = new BarDataSet(sugarFasting,"mm/dl");
-        BarData data = new BarData((List<String>) set5);
+        BarData data = new BarData(set5);
+        data.setBarWidth(barWidth);
 
         mDiastolicBarChart.setData(data);
 
