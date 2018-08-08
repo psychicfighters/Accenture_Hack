@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChildViewActivity extends AppCompatActivity {
-    HorizontalBarChart mFastingBarChat;
+
     HorizontalBarChart mPpBarChat;
     HorizontalBarChart mRandomBarChat;
     HorizontalBarChart mSystolicBarChat;
@@ -24,9 +24,14 @@ public class ChildViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child_view);
 
-        mFastingBarChat = (HorizontalBarChart)findViewById(R.id.sugar_fasting);
-        ArrayList<String>sugarFastingChart = new ArrayList<String>();
-        //setFastingData();
+
+        HorizontalBarChart mFastingBarChat = (HorizontalBarChart)findViewById(R.id.sugar_fasting);
+        ArrayList<String> sugarFastingChart = new ArrayList<String>();
+        sugarFastingChart.add("100");
+        BarDataSet barDataSet;
+
+
+        setFastingData();
         mPpBarChat = (HorizontalBarChart)findViewById(R.id.sugar_pp);
         //setPpData();
         mRandomBarChat = (HorizontalBarChart)findViewById(R.id.sugar_random);
@@ -37,7 +42,7 @@ public class ChildViewActivity extends AppCompatActivity {
         //setDiastolicData();
 
     }
-    /*private void setFastingData() {
+    private void setFastingData() {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<String> sugarFasting = new ArrayList<String>();
@@ -47,7 +52,7 @@ public class ChildViewActivity extends AppCompatActivity {
 
 
     }
-    private void setPpData() {
+   /* private void setPpData() {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<BarEntry> sugarFasting = new ArrayList<>();
