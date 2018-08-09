@@ -2,16 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
     <item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/check"
-                android:icon="@drawable/callcheck"
-                android:title="Call For A Checkup " />
+                android:icon="@drawable/ic_call_black_24dp"
+                android:title="National Health Helpline " />
             <item
                 android:id="@+id/more"
-                android:icon="@drawable/moreikure"
+                android:icon="@drawable/ic_more_black_24dp"
                 android:title="More About We Care" />
 
         </menu>

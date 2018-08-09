@@ -99,12 +99,12 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
         int id = item.getItemId();
         if (id == R.id.check) {
             if (isPermissionGranted()) {
-                call_action("03340634188");
+                call_action("1800-180-1104");
             }
 
 
         }  else if (id == R.id.more) {
-            String url = "http://www.ikuretechsoft.com/";
+            String url = "https://wealwayscareforparents.firebaseapp.com/";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);

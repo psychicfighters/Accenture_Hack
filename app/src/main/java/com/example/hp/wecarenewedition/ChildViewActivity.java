@@ -57,12 +57,12 @@ public class ChildViewActivity extends AppCompatActivity {
 //            float val1 = (float) (Math.random() * 70);
 //            sugarpp.add(new BarEntry(i*spaceforBar, (int) val1));
 //        }
-        sugarpp.add(new BarEntry(75, 1));
+        sugarpp.add(new BarEntry(75, 0));
         ArrayList<String> labels = new ArrayList<>();
         labels.add("100");
         BarDataSet set21;
         set21 = new BarDataSet(sugarpp,"mm/dl");
-        set21.setBarSpacePercent(70f);
+        //set21.setBarSpacePercent(100f);
         BarData data1 = new BarData(labels,set21);
         //data.setBarWidth(barWidth);
         mPpBarChat.setData(data1);
@@ -79,7 +79,7 @@ public class ChildViewActivity extends AppCompatActivity {
         //    float val = (float) (Math.random() * 50);
          //   sugarFasting.add(new BarEntry(i*spaceforBar, (int) val));
         //}
-        sugarFasting.add(new BarEntry(100, 0));
+        sugarFasting.add(new BarEntry(10, 0));
         ArrayList<String> labels = new ArrayList<>();
         labels.add("100");
         BarDataSet set2;
@@ -99,7 +99,7 @@ public class ChildViewActivity extends AppCompatActivity {
             float val = (float) (Math.random() * 80);
             sugarRandom.add(new BarEntry(i*spaceforBar, (int) val));
         }*/
-        sugarRandom.add(new BarEntry(150, 0));
+        sugarRandom.add(new BarEntry(50, 0));
         ArrayList<String> labels1 = new ArrayList<>();
         labels1.add("100");
         BarDataSet set2;
