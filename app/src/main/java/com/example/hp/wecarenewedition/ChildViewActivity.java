@@ -1,5 +1,6 @@
 package com.example.hp.wecarenewedition;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -52,27 +53,33 @@ public class ChildViewActivity extends AppCompatActivity {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<BarEntry> sugarpp = new ArrayList<>();
-        for (int i = 0; i <count; i++) {
-            float val1 = (float) (Math.random() * 70);
-            sugarpp.add(new BarEntry(i*spaceforBar, (int) val1));
-        }
+//        for (int i = 0; i <count; i++) {
+//            float val1 = (float) (Math.random() * 70);
+//            sugarpp.add(new BarEntry(i*spaceforBar, (int) val1));
+//        }
+        sugarpp.add(new BarEntry(75, 1));
         ArrayList<String> labels = new ArrayList<>();
         labels.add("100");
         BarDataSet set21;
         set21 = new BarDataSet(sugarpp,"mm/dl");
+        set21.setBarSpacePercent(70f);
         BarData data1 = new BarData(labels,set21);
         //data.setBarWidth(barWidth);
         mPpBarChat.setData(data1);
+
+        mPpBarChat.animateY(1000);
+        set21.setColor(Color.parseColor("#FF1402A3"));
 
     }
     private void setFastingData(int count,int range) {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<BarEntry> sugarFasting = new ArrayList<>();
-        for (int i = 0; i <count; i++) {
-            float val = (float) (Math.random() * 70);
-            sugarFasting.add(new BarEntry(i*spaceforBar, (int) val));
-        }
+        //for (int i = 0; i <count; i++) {
+        //    float val = (float) (Math.random() * 50);
+         //   sugarFasting.add(new BarEntry(i*spaceforBar, (int) val));
+        //}
+        sugarFasting.add(new BarEntry(100, 0));
         ArrayList<String> labels = new ArrayList<>();
         labels.add("100");
         BarDataSet set2;
@@ -80,16 +87,19 @@ public class ChildViewActivity extends AppCompatActivity {
         BarData data = new BarData(labels,set2);
         //data.setBarWidth(barWidth);
         mFastingBarChat.setData(data);
+        mFastingBarChat.animateY(1000);
+        set2.setColor(Color.parseColor("#FFE90000"));
 
     }
     private void setRandomData(int count,int range) {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<BarEntry> sugarRandom = new ArrayList<>();
-        for (int i = 0; i <count; i++) {
-            float val = (float) (Math.random() * 70);
+        /*for (int i = 0; i <count; i++) {
+            float val = (float) (Math.random() * 80);
             sugarRandom.add(new BarEntry(i*spaceforBar, (int) val));
-        }
+        }*/
+        sugarRandom.add(new BarEntry(150, 0));
         ArrayList<String> labels1 = new ArrayList<>();
         labels1.add("100");
         BarDataSet set2;
@@ -97,16 +107,20 @@ public class ChildViewActivity extends AppCompatActivity {
         BarData data = new BarData(labels1,set2);
         //data.setBarWidth(barWidth);
         mRandomBarChat.setData(data);
+        mRandomBarChat.animateY(1000);
+        set2.setColor(Color.parseColor("#FFFF05F7"));
+
 
     }
     private void setSystolicData(int count,int range) {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<BarEntry> sugarSystolic = new ArrayList<>();
-        for (int i = 0; i <count; i++) {
-            float val = (float) (Math.random() * 70);
+       /* for (int i = 0; i <count; i++) {
+            float val = (float) (Math.random() * 40);
             sugarSystolic.add(new BarEntry(i*spaceforBar, (int) val));
-        }
+        }*/
+        sugarSystolic.add(new BarEntry(90, 0));
         ArrayList<String> labels = new ArrayList<>();
         labels.add("100");
         BarDataSet set3;
@@ -114,16 +128,19 @@ public class ChildViewActivity extends AppCompatActivity {
         BarData data = new BarData(labels,set3);
         //data.setBarWidth(barWidth);
         mSystolicBarChat.setData(data);
-
+        mSystolicBarChat.animateY(1000);
+        set3.setColor(Color.parseColor("#FFFFCC00"));
     }
     private void setDiastlicData(int count,int range) {
         float barWidth = 9f;
         float spaceforBar = 10f;
         ArrayList<BarEntry> sugarDiastolic = new ArrayList<>();
-        for (int i = 0; i <count; i++) {
-            float val3 = (float) (Math.random() * 70);
+        /*for (int i = 0; i <count; i++) {
+            float val3 = (float) (Math.random() * 20);
             sugarDiastolic.add(new BarEntry(i*spaceforBar, (int) val3));
-        }
+        }*/
+
+        sugarDiastolic.add(new BarEntry(70, 0));
         ArrayList<String> labels = new ArrayList<>();
         labels.add("100");
         BarDataSet set2;
@@ -131,8 +148,8 @@ public class ChildViewActivity extends AppCompatActivity {
         BarData data = new BarData(labels,set2);
         //data.setBarWidth(barWidth);
         mDiastolicBarChart.setData(data);
-
+        mDiastolicBarChart.animateY(1000);
+        set2.setColor(Color.parseColor("#FF34AE00"));
     }
-
 
 }
