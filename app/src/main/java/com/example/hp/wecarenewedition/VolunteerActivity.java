@@ -53,6 +53,16 @@ public class VolunteerActivity extends AppCompatActivity {
 
             }
         });
+
+        Button buttonecg = findViewById(R.id.submit1);
+        buttonecg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VolunteerActivity.this, VolunteerActivity.class);
+                startActivity(intent);
+
+            }
+        });
         Button buttonbp = findViewById(R.id.submit2);
         buttonbp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,14 +93,6 @@ public class VolunteerActivity extends AppCompatActivity {
 
             }
         });
-        Button buttonecg = findViewById(R.id.submit1);
-        buttonecg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(VolunteerActivity.this, VolunteerActivity.class);
-                startActivity(intent);
 
-            }
-        });
     }
 }

@@ -131,9 +131,9 @@ public class CheckupFragment extends android.support.v4.app.Fragment implements 
                                 ));
                                 //Toast.makeText(getActivity(),result.body().getCheckupreqlist().get(i).getType(),Toast.LENGTH_SHORT).show();
                             }
-                            for (int i = 0; i < result.body().getPendinglist().size(); i++) {
-                                pending[i] = result.body().getPendinglist().get(i).getType();
-                            }
+//                            for (int i = 0; i < result.body().getPendinglist().size(); i++) {
+//                                pending[i] = result.body().getPendinglist().get(i).getType();
+//                            }
                             checkupAdapter = new CheckupAdapter(getContext(), dy);
 
 

@@ -630,11 +630,11 @@ public class RequestService extends AppCompatActivity {
                     }
                     if (result != null) {
                         if (result.body().getCheckupreqlist().size() > 0) {
-                            for (int i = 0; i < result.body().getPendinglist().size(); i++) {
-                                pending[i] = result.body().getPendinglist().get(i).getType();
+//                            for (int i = 0; i < result.body().getPendinglist().size(); i++) {
+//                                pending[i] = result.body().getPendinglist().get(i).getType();
 
                                 //Toast.makeText(RequestService.this,pending[i],Toast.LENGTH_SHORT).show();
-                            }
+                            //}
                             checktoblockviews();
 
                         }
