@@ -80,6 +80,33 @@ public class ChildViewActivity extends AppCompatActivity {
 
 
     }*/
+
+    private void setFastingData(int count,int range, int value) {
+        float barWidth = 9f;
+        float spaceforBar = 10f;
+        ArrayList<BarEntry> sugarFasting = new ArrayList<>();
+        //for (int i = 0; i <count; i++) {
+        //    float val = (float) (Math.random() * 50);
+         //   sugarFasting.add(new BarEntry(i*spaceforBar, (int) val));
+        //}
+        sugarFasting.add(new BarEntry(value, 0));
+        ArrayList<String> labels = new ArrayList<>();
+        labels.add(String.valueOf(value));
+        BarDataSet set2;
+        set2 = new BarDataSet(sugarFasting,"mm/dl");
+        if(value > 110)
+            set2.setColor(Color.parseColor("#c62828"));
+        else
+            set2.setColor(Color.parseColor("#2e7d32"));
+
+        BarData data = new BarData(labels,set2);
+        //data.setBarWidth(barWidth);
+        mFastingBarChat.setData(data);
+        mFastingBarChat.animateY(600);
+
+
+    }
+
     private void setPpData(int count,int range, int value) {
         float barWidth = 9f;
         float spaceforBar = 10f;
@@ -94,38 +121,15 @@ public class ChildViewActivity extends AppCompatActivity {
         BarDataSet set21;
         set21 = new BarDataSet(sugarpp,"mm/dl");
         //set21.setBarSpacePercent(100f);
+        if(value > 150)
+            set21.setColor(Color.parseColor("#c62828"));
+        else
+            set21.setColor(Color.parseColor("#2e7d32"));
         BarData data1 = new BarData(labels,set21);
         //data.setBarWidth(barWidth);
         mPpBarChat.setData(data1);
 
-        mPpBarChat.animateY(800);
-        if(value > 150)
-        set21.setColor(Color.parseColor("#c62828"));
-        else
-            set21.setColor(Color.parseColor("#2e7d32"));
-
-    }
-    private void setFastingData(int count,int range, int value) {
-        float barWidth = 9f;
-        float spaceforBar = 10f;
-        ArrayList<BarEntry> sugarFasting = new ArrayList<>();
-        //for (int i = 0; i <count; i++) {
-        //    float val = (float) (Math.random() * 50);
-         //   sugarFasting.add(new BarEntry(i*spaceforBar, (int) val));
-        //}
-        sugarFasting.add(new BarEntry(value, 0));
-        ArrayList<String> labels = new ArrayList<>();
-        labels.add(String.valueOf(value));
-        BarDataSet set2;
-        set2 = new BarDataSet(sugarFasting,"mm/dl");
-        BarData data = new BarData(labels,set2);
-        //data.setBarWidth(barWidth);
-        mFastingBarChat.setData(data);
-        mFastingBarChat.animateY(400);
-        if(value > 110)
-            set2.setColor(Color.parseColor("#c62828"));
-        else
-            set2.setColor(Color.parseColor("#2e7d32"));
+        mPpBarChat.animateY(1000);
 
 
     }
@@ -142,15 +146,16 @@ public class ChildViewActivity extends AppCompatActivity {
         labels1.add(String.valueOf(value));
         BarDataSet set2;
         set2 = new BarDataSet(sugarRandom,"mm/dl");
-        BarData data = new BarData(labels1,set2);
-        //data.setBarWidth(barWidth);
-        mRandomBarChat.setData(data);
-        mRandomBarChat.animateY(1000);
-        set2.setColor(Color.parseColor("#FFFF05F7"));
         if(value > 135)
             set2.setColor(Color.parseColor("#c62828"));
         else
             set2.setColor(Color.parseColor("#2e7d32"));
+
+        BarData data = new BarData(labels1,set2);
+        //data.setBarWidth(barWidth);
+        mRandomBarChat.setData(data);
+        mRandomBarChat.animateY(1200);
+        //set2.setColor(Color.parseColor("#FFFF05F7"));
 
 
 
@@ -171,7 +176,7 @@ public class ChildViewActivity extends AppCompatActivity {
         BarData data = new BarData(labels,set3);
         //data.setBarWidth(barWidth);
         mSystolicBarChat.setData(data);
-        mSystolicBarChat.animateY(1000);
+        mSystolicBarChat.animateY(1700);
         set3.setColor(Color.parseColor("#FFFFCC00"));
     }
     private void setDiastlicData(int count,int range, int value) {
@@ -191,7 +196,7 @@ public class ChildViewActivity extends AppCompatActivity {
         BarData data = new BarData(labels,set2);
         //data.setBarWidth(barWidth);
         mDiastolicBarChart.setData(data);
-        mDiastolicBarChart.animateY(1000);
+        mDiastolicBarChart.animateY(2000);
         set2.setColor(Color.parseColor("#FF34AE00"));
     }
 
