@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.hp.ikurenewedition.R;
 import com.example.hp.ikurenewedition.pojodatamodels.ShowTheImage;
 import com.example.hp.ikurenewedition.rest.ApiClient;
@@ -122,8 +123,12 @@ public class DisplayPresActivity extends AppCompatActivity {
                     downurl = response.body().getPrescriptionImage();
                     timestamp = response.body().getTimestamp();
                     Glide.with(getBaseContext())
+
                             .load(response.body().getPrescriptionImage())
-                            //.placeholder(R.drawable.ikurelogo)
+                            .apply(new RequestOptions()
+                                    .placeholder(R.drawable.prescri)
+                                    .fitCenter())
+
                             .into(img);
                     progressDialog.dismiss();
                     save.setVisibility(View.VISIBLE);

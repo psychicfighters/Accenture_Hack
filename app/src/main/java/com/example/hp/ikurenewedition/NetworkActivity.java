@@ -148,7 +148,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                     if (result != null) {
                         if (result.body().getPatientlist().size() > 0) {
                             for (int i = 0; i < result.body().getPatientlist().size(); i++) {
-                                org = result.body().getPatientlist().get(i).getPid();
+
                                 data = result.body().getPatientlist().get(i).getPid();
                                 if(from.equals("child") || from.equals("vol"))
                                     data = "---";
@@ -173,6 +173,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                 //Toast.makeText(List_display.this,"Hello",Toast.LENGTH_SHORT).show();
                                 url = result.body().getPatientlist().get(position).getPid();
+                                org = result.body().getPatientlist().get(position).getPid();
                                 name = result.body().getPatientlist().get(position).getName();
                                 Intent k = null;
                                 if(from.equals("parent")) {

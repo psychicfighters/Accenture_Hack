@@ -4,6 +4,7 @@ import com.example.hp.ikurenewedition.pojodatamodels.BpUpload;
 import com.example.hp.ikurenewedition.pojodatamodels.BpUploadResult;
 import com.example.hp.ikurenewedition.pojodatamodels.ConfirmService;
 import com.example.hp.ikurenewedition.pojodatamodels.DataUpload;
+import com.example.hp.ikurenewedition.pojodatamodels.EcgUpload;
 import com.example.hp.ikurenewedition.pojodatamodels.Register;
 import com.example.hp.ikurenewedition.pojodatamodels.SendData;
 import com.example.hp.ikurenewedition.pojodatamodels.SendRegister;
@@ -39,6 +40,11 @@ public interface ApiInterface1 {
     @POST("uploadvitals")
     Call<SugarUploadResult> vitalupload(@Body VitalUpload data);
 
+    @POST("uploadecg")
+    Call<SugarUploadResult> ecgupload(@Body EcgUpload data);
+
+    @POST("uploadpres")
+    Call<SugarUploadResult> presupload(@Body EcgUpload data);
 
 
     @POST("checkuprequest")

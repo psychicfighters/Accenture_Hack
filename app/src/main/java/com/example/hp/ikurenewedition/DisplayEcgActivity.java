@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.hp.ikurenewedition.R;
 import com.example.hp.ikurenewedition.pojodatamodels.ShowTheEcg;
 import com.example.hp.ikurenewedition.rest.ApiClient;
@@ -121,7 +122,9 @@ public class DisplayEcgActivity extends AppCompatActivity {
 
                     Glide.with(getBaseContext())
                             .load(response.body().getEcgUrl())
-                            //.placeholder(R.drawable.ikurelogo)
+                            .apply(new RequestOptions()
+                                    .placeholder(R.drawable.ecgtest)
+                                    .fitCenter())
                             .into(imageView);
                         save.setVisibility(View.VISIBLE);
 
