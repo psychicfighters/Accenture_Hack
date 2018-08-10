@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.hp.ikurenewedition.R;
 import com.example.hp.ikurenewedition.dataclass.Data_class_four;
 import com.example.hp.ikurenewedition.pojodatamodels.BPDetails;
+import com.example.hp.ikurenewedition.pojodatamodels.CheckupDetails;
 import com.example.hp.ikurenewedition.pojodatamodels.SugarDetail;
 import com.example.hp.ikurenewedition.rest.ApiClient;
 import com.example.hp.ikurenewedition.rest.ApiInterface;
@@ -17,11 +19,10 @@ import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 import java.util.Objects;
 
 import retrofit2.Call;
@@ -46,6 +47,9 @@ public class ChildViewActivity extends AppCompatActivity {
     private String pid;
     private ArrayList<String> syslist = new ArrayList<>();
     private ArrayList<String> dialist = new ArrayList<>();
+    private TextView textview;
+    private ArrayList<Float> timelist = new ArrayList<Float>();
+    TextView textView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +57,8 @@ public class ChildViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_child_view);
         Intent intent = getIntent();
         pid = intent.getStringExtra("patient");
-
+        textview = findViewById(R.id.last_checkup);
+        textView2 = findViewById(R.id.timetilllast_checkup);
 
         mFastingBarChat = (HorizontalBarChart)findViewById(R.id.sugar_fasting);
 
@@ -67,7 +72,8 @@ public class ChildViewActivity extends AppCompatActivity {
 
         callAPI1();
         callAPI2();
-        progressDialog.dismiss();
+        callAPI3();
+        //progressDialog.dismiss();
 
     }
     /*private void setFastingData() {
@@ -325,10 +331,59 @@ public class ChildViewActivity extends AppCompatActivity {
             }
         });
     }
-    private String convert(Float time) {
+
+    private void callAPI3() {
+
+            progressDialog.show();
+            ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+            Call<CheckupDetails> call = apiService.getDetails11(pid);
+            call.enqueue(new Callback<CheckupDetails>() {
+            @Override
+            public void onResponse(Call<CheckupDetails> call, final Response<CheckupDetails> result) {
+
+                    progressDialog.dismiss();
+                if(result.body().getError()){
+                    //bullshit();
+                } else {
+                    if (result.body().getCheckupreqlist().size() == 0) {
+                        //bullshit();
+                    }
+                    if (result != null) {
+                        if (result.body().getCheckupreqlist().size() > 0) {
+                            for (int i = 0; i < result.body().getCheckupreqlist().size(); i++) {
+                                timelist.add(Float.parseFloat(result.body().getCheckupreqlist().get(i).getTimestamp()));
+
+                            }
+                        }
+                    }
+                }
+                if(timelist.get(0) == null)
+                    textview.setText("Yet To Take");
+                else{
+                    float val = Collections.max(timelist);
+                    textview.setText(convert(val));
+                    double time= System.currentTimeMillis();
+                    if((time - val) > 0 )
+                        textView2.setText(String.valueOf(((time - val) / (1000*60*60*24))));
+                    else
+                        textView2.setText("Scheduled Acurately");
+
+                }
+
+            }
+
+                @Override
+                public void onFailure(Call<CheckupDetails> call, Throwable t) {
+                    progressDialog.dismiss();
+                }
+            });
+    }
+
+    private String convert(float time) {
+
         float tim = time;
-        tim = tim * 1000;
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("d MMM HH:mm");
+        tim = tim;
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
         return formatter.format(tim);
 
         //return date;
