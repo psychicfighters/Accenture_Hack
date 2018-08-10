@@ -10,21 +10,16 @@
         android:layout_height="wrap_content">
         <android.support.v7.widget.CardView
             android:id="@+id/card1"
-            android:elevation="5dp"
-
             app:cardCornerRadius="18dp"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            >
+            android:layout_marginTop="8dp">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
+                android:layout_height="match_parent">
                 <RelativeLayout
                     android:id="@+id/radio1"
                     android:layout_width="match_parent"
@@ -33,31 +28,32 @@
                     android:layout_margin="15dp">
                     <TextView
                         android:id="@+id/gender_textview"
-                        android:paddingRight="15dp"
+                        android:paddingEnd="15dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Upload"
+                        android:text="@string/upload"
                         android:textColor="#000"
-                        android:textSize="20dp"/>
+                        android:textSize="20sp"
+                        tools:ignore="RtlSymmetry" />
                     <RadioGroup
                         android:id="@+id/image_radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/gender_textview"
+                        android:layout_toEndOf="@+id/gender_textview"
                         android:orientation="horizontal">
                         <RadioButton
                             android:id="@+id/prescription_radio_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Prescription"
+                            android:text="@string/prescription"
                             android:checked="true"
                             />
                         <RadioButton
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
                             android:id="@+id/ecgreport_radio_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text = "ECG Report"
+                            android:text = "@string/ecg_report"
                             />
                     </RadioGroup>
                 </RelativeLayout>
@@ -75,9 +71,10 @@
                         android:layout_marginTop="20dp"
                         android:layout_weight="1"
                         android:background="@drawable/circ_date_back"
-                        android:text="Capture"
+                        android:text="@string/capture"
                         android:textColor="#adafb9"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        tools:ignore="SmallSp" />
                     <Button
                         android:layout_margin="15dp"
                         android:padding="10dp"
@@ -89,7 +86,7 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF"
                         />
                 </LinearLayout>
@@ -98,7 +95,6 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/card2"
-            android:elevation="5dp"
             app:cardCornerRadius="18dp"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -128,14 +124,14 @@
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:id="@+id/submit2"
-                        android:layout_width="110dp"
+                        android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginBottom="9dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </RelativeLayout>
@@ -145,17 +141,14 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:cardCornerRadius="18dp"
-            android:elevation="5dp"
             android:layout_below="@+id/card2"
             android:layout_margin="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            >
+            android:layout_marginTop="8dp">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                android:layout_height="match_parent">
                 <ImageView
                     android:id="@+id/image3"
                     android:layout_width="match_parent"
@@ -171,16 +164,16 @@
 
                     <Button
                         android:id="@+id/submit3"
-                        android:layout_width="110dp"
+                        android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginBottom="9dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </RelativeLayout>
@@ -191,12 +184,10 @@
             android:layout_height="200dp"
             android:layout_below="@+id/card3"
             app:cardCornerRadius="18dp"
-            android:elevation="5dp"
             android:layout_margin="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            >
+            android:layout_marginTop="8dp">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -217,14 +208,14 @@
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:id="@+id/submit4"
-                        android:layout_width="110dp"
+                        android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginBottom="9dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </RelativeLayout>

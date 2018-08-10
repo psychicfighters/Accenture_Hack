@@ -19,9 +19,6 @@
         android:paddingRight="20dp"
         android:elevation="5dp"
         android:background="#fff">
-
-
-
             <EditText
                 android:layout_margin="10dp"
                 android:padding="10dp"
@@ -30,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:textColor="#000"/>
 
             <EditText
@@ -41,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:hint="Token" />
+                android:hint="@string/token" />
 
         <Button
             android:layout_margin="15dp"
@@ -51,7 +48,7 @@
             android:layout_marginTop="30dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/circ_button1"
-            android:text="Enter"
+            android:text="@string/token"
             android:textColor="#fff" />
 
 

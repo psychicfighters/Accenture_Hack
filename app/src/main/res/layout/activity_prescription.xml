@@ -11,7 +11,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:gravity="center_horizontal"
-    android:text="List Of Prescriptions"
+    android:text="@string/list_of_prescription"
     android:textColor="#FFFFFF"
     android:textSize="24sp"
     android:textStyle="bold" />

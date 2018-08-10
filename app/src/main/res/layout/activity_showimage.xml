@@ -9,13 +9,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <ImageView
             android:id="@+id/showimg"
             android:layout_width="400dp"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-
             android:scaleType="fitXY" />
 
         <com.github.clans.fab.FloatingActionMenu
@@ -23,10 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="bottom|right"
             android:layout_marginBottom="2dp"
-            android:layout_marginRight="2dp"
+            android:layout_marginEnd="2dp"
             fab:menu_animationDelayPerItem="50"
             fab:menu_backgroundColor="@android:color/transparent"
             fab:menu_buttonSpacing="0dp"
@@ -64,10 +62,6 @@
                 fab:fab_colorPressed="@color/floating2"
                 fab:fab_colorRipple="@color/floating3"
                 fab:fab_size="mini" />
-
-
         </com.github.clans.fab.FloatingActionMenu>
-
-
     </RelativeLayout>
 </RelativeLayout>

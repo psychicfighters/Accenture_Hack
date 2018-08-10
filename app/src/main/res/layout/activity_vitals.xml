@@ -10,17 +10,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:gravity="center_horizontal"
-        android:text="List Of Vital Reports"
+        android:text="@string/list_of_vital_reports"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
-
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header">
-
         <ListView
             android:id="@+id/list_of_ecg"
         android:layout_width="match_parent"
@@ -31,6 +29,4 @@
 
     </ListView>
     </android.support.v4.widget.SwipeRefreshLayout>
-
-
 </RelativeLayout>

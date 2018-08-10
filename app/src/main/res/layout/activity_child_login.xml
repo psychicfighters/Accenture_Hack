@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Name" />
+                android:hint="@string/name" />
 
             <EditText
                 android:layout_margin="15dp"
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:hint="Token" />
+                android:hint="@string/token" />
 
         <Button
             android:layout_margin="15dp"
@@ -46,7 +46,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@drawable/circ_button1"
-            android:text="Enter"
+            android:text="@string/enter"
             android:textColor="#fff" />
 
 

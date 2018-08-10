@@ -15,11 +15,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
-        android:text="Your Details"
+        android:text="@string/your_details"
         android:textColor="#fff"
         android:textSize="24sp"
         android:textStyle="bold" />
-
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,9 +32,7 @@
         app:borderWidth="0dp"
         app:elevation="6dp"
         app:fabSize="normal"
-        android:scaleType="fitXY"
-        />
-
+        android:scaleType="fitXY"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,8 +40,5 @@
         android:id="@+id/list_of_vitals"
         android:divider="@null"
         android:dividerHeight="0dp">
-
     </ListView>
-
-
 </RelativeLayout>

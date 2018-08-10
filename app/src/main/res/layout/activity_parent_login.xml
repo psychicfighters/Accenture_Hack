@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:ems="10"
-                android:hint="Name"/>
+                android:hint="@string/name"/>
             <EditText
                 android:layout_margin="10dp"
                 android:padding="10dp"
@@ -35,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:hint="Email" />
+                android:hint="@string/email" />
 
 
             <EditText
@@ -45,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textLongMessage"
-                android:hint="Address" />
+                android:hint="@string/address" />
 
 
             <EditText
@@ -55,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:hint="Age"/>
+                android:hint="@string/age"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -64,31 +63,32 @@
             android:layout_margin="15dp">
             <TextView
                 android:id="@+id/gender_textview"
-                android:paddingRight="15dp"
+                android:paddingEnd="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gender"
+                android:text="@string/gender"
                 android:textColor="#000"
-                android:textSize="20dp"/>
+                android:textSize="20sp"
+                tools:ignore="RtlSymmetry" />
             <RadioGroup
                 android:id="@+id/gender_radio_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/gender_textview"
+                android:layout_toEndOf="@+id/gender_textview"
                 android:orientation="horizontal">
                 <RadioButton
                     android:id="@+id/male_radio_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male"
+                    android:text="@string/male"
                     android:checked="true"
                     />
                 <RadioButton
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:id="@+id/female_radio_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "Female"
+                    android:text = "@string/female"
                     />
             </RadioGroup>
         </RelativeLayout>
@@ -98,13 +98,9 @@
             android:id="@+id/btn_signup"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             android:background="@drawable/circ_button1"
             android:layout_marginTop="40dp"
             android:textColor="@android:color/white"/>
-
-
     </LinearLayout>
-
-
 </LinearLayout>

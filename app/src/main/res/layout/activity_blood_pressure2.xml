@@ -26,7 +26,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Systolic(mm of Hg)" />
+            android:hint="@string/systolic_hint" />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -37,7 +37,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Diastolic(mm of Hg)" />
+            android:hint="@string/diastolic_hint" />
 
 
         <Button
@@ -48,7 +48,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@drawable/circ_button1"
-            android:text="Enter"
+            android:text="@string/enter"
             android:textColor="#fff" />
 
     </LinearLayout>

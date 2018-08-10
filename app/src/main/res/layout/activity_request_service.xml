@@ -15,12 +15,10 @@
         android:layout_margin="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        >
+        android:layout_marginTop="8dp">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/image1"
                 android:layout_width="match_parent"
@@ -30,47 +28,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_below="@+id/image1">
-            <Button
-                android:id="@+id/selectdate1"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="21dp"
-
-                android:layout_marginTop="20dp"
-                android:background="@drawable/circ_date_back"
-                android:text="Select Date"
-
-                android:textColor="#adafb9"
-
-                android:textSize="11sp"
-
-                />
+                <Button
+                    android:id="@+id/selectdate1"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circ_date_back"
+                    android:text="@string/select_date"
+                    android:textColor="#adafb9"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
 
                 <Button
                     android:id="@+id/selecttime1"
-
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:layout_marginBottom="9dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/circ_time_back"
-                    android:text="Set time"
+                    android:text="@string/set_time"
                     android:textColor="#9b9daa"
                     android:textSize="11sp"
-
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
 
                 <Button
                     android:id="@+id/submit1"
-
                     android:layout_width="110dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="9dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/circ_submit_back"
-                    android:text="Submit"
+                    android:text="@string/submit"
                     android:textColor="#FFFFFF"
                      />
             </LinearLayout>
@@ -107,38 +99,33 @@
                         android:layout_marginStart="21dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_date_back"
-
-                        android:text="Select Date"
+                        android:text="@string/select_date"
                         android:textColor="#adafb9"
-
                         android:textSize="11sp"
-
-                        />
-
+                        tools:ignore="SmallSp" />
                     <Button
                         android:id="@+id/selecttime2"
-
                         android:layout_width="80dp"
                         android:layout_height="30dp"
                         android:layout_marginBottom="9dp"
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_time_back"
-                        android:text="Set time"
-
+                        android:text="@string/set_time"
                         android:textColor="#9b9daa"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
                     <Button
                         android:id="@+id/submit2"
                         android:layout_width="110dp"
                         android:layout_height="40dp"
                         android:layout_marginBottom="9dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </RelativeLayout>
@@ -173,11 +160,10 @@
                         android:layout_marginStart="21dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_date_back"
-                        android:text="Select Date"
+                        android:text="@string/select_date"
                         android:textColor="#adafb9"
-
                         android:textSize="11sp"
-                        />
+                        tools:ignore="SmallSp" />
 
                     <Button
                         android:id="@+id/selecttime3"
@@ -187,22 +173,23 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_time_back"
-                        android:text="Set time"
+                        android:text="@string/set_time"
                         android:textColor="#9b9daa"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
                     <Button
                         android:id="@+id/submit3"
                         android:layout_width="110dp"
                         android:layout_height="40dp"
                         android:layout_marginBottom="9dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
 
 
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </RelativeLayout>
@@ -237,14 +224,10 @@
                         android:layout_marginStart="21dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_date_back"
-                        android:text="Select Date"
-
+                        android:text="@string/select_date"
                         android:textColor="#adafb9"
-
-
                         android:textSize="11sp"
-                        />
-
+                        tools:ignore="SmallSp" />
                     <Button
                         android:id="@+id/selecttime4"
                         android:layout_width="80dp"
@@ -253,20 +236,21 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_time_back"
-                        android:text="Set time"
+                        android:text="@string/set_time"
                         android:textColor="#9b9daa"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
                     <Button
                         android:id="@+id/submit4"
                         android:layout_width="110dp"
                         android:layout_height="40dp"
                         android:layout_marginBottom="9dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </RelativeLayout>
@@ -279,12 +263,10 @@
             android:layout_margin="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            >
+            android:layout_marginTop="8dp">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                android:layout_height="match_parent">
                 <ImageView
                     android:id="@+id/image5"
                     android:layout_width="match_parent"
@@ -299,15 +281,12 @@
                         android:layout_width="80dp"
                         android:layout_height="30dp"
                         android:layout_marginStart="21dp"
-
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_date_back"
-
-                        android:text="Select Date"
+                        android:text="@string/select_date"
                         android:textColor="#9b9daa"
-
                         android:textSize="11sp"
-                        />
+                        tools:ignore="SmallSp" />
 
                     <Button
                         android:id="@+id/selecttime5"
@@ -318,20 +297,21 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_time_back"
-                        android:text="Set time"
+                        android:text="@string/set_time"
                         android:textColor="#9b9daa"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
                     <Button
                         android:id="@+id/submit5"
                         android:layout_width="110dp"
                         android:layout_height="40dp"
                         android:layout_marginBottom="9dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/circ_submit_back"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </RelativeLayout>
@@ -347,30 +327,24 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="200dp"
             android:visibility="gone">
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <ImageView
                     android:id="@+id/image6"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:src="@drawable/ikurelogo2" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_below="@+id/image6"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
-                    android:text="Sorry You have already requested for all the services"
+                    android:text="@string/sorry"
                     android:textSize="24sp"
                     android:textStyle="bold" />
-
             </RelativeLayout>
         </android.support.v7.widget.CardView>
-
-
     </RelativeLayout>
 </ScrollView>

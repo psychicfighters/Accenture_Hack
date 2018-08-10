@@ -22,7 +22,7 @@
 
 
             android:paddingTop="4dp"
-            android:text="Services Requested:"
+            android:text="@string/service_req"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 

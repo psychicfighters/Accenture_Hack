@@ -8,13 +8,13 @@
     android:background="@drawable/abstractfront"
     android:layout_gravity="center"
     tools:context="com.example.hp.wecarenewedition.VitalReports">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="45dp"
-        >
+        android:layout_marginTop="45dp">
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -25,7 +25,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Height(cm)" />
+            android:hint="@string/height_hint" />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -36,7 +36,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Weight(Kg)" />
+            android:hint="@string/weight_hint" />
         <EditText
             android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
@@ -47,7 +47,7 @@
             android:ems="10"
             android:textColor="#000"
             android:inputType="number"
-            android:hint="Temperature(°F)" />
+            android:hint="@string/temp_hint" />
         <Button
             android:layout_margin="15dp"
             android:id="@+id/btnEnter3"
@@ -56,10 +56,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@drawable/circ_button1"
-            android:text="Enter"
+            android:text="@string/enter"
             android:textColor="#fff" />
-
     </LinearLayout>
-
-
 </RelativeLayout>

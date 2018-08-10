@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:gravity="center_horizontal"
-        android:text="List Of ECG Reports"
+        android:text="@string/list_of_ecg_report"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
