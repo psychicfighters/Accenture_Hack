@@ -120,6 +120,23 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
         //startActivity(i);
 
     }
+
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
+        NoteListView= null;
+        progressDialog = null;
+        notesAdapter = null;
+        patient = null;
+        card_no = null;
+        m_Text= null;
+        data = null;
+        name = null;
+        url = null;
+        org = null;
+    }
+
     private void callAPI1(){
         if (!start)
             progressDialog.show();

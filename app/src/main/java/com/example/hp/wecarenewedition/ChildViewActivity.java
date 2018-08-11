@@ -58,9 +58,14 @@ public class ChildViewActivity extends AppCompatActivity {
         textView2 = findViewById(R.id.timetilllast_checkup);
         mSugarBarChat = (HorizontalBarChart)findViewById(R.id.sugar_barchart);
         mPressureChat = (HorizontalBarChart)findViewById(R.id.pressure_barchart);
+        setSugarBarChart(0,250,70);
+        setSugarBarChart(1,350,120);
+        setSugarBarChart(2,250,110);
+        setPressureBarChart(0,200,90);
+        setPressureBarChart(1,200,110);
 
-        callAPI1();
-        callAPI2();
+        //callAPI1();
+        //callAPI2();
         callAPI3();
         //progressDialog.dismiss();
     }
