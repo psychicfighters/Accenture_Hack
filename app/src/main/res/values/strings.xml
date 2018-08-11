@@ -44,7 +44,7 @@
     <string name="time_till_last_checkup">Last Check up</string>
     <string name="health_tips">Health Tips</string>
     <string name="we_care_health_tips">We Care Health Tips</string>
-    <string name="sugar_report_last_time">Sugar Report Last Time</string>
+    <string name="sugar_report_last_time">Sugar Report</string>
     <string name="list_of_ecg_report">List Of ECG Reports</string>
     <string name="unique_id">Unique Id:</string>
     <string name="email">Email</string>
