@@ -40,8 +40,8 @@
     <string name="bmi">BMI :</string>
     <string name="remarks">Remarks</string>
     <string name="last_checkup">Last Checkup</string>
-    <string name="checkup_for">Check up for</string>
-    <string name="time_till_last_checkup">Time till last Check up:</string>
+    <string name="checkup_for">Check up</string>
+    <string name="time_till_last_checkup">Last Check up</string>
     <string name="health_tips">Health Tips</string>
     <string name="we_care_health_tips">We Care Health Tips</string>
     <string name="sugar_report_last_time">Sugar Report Last Time</string>

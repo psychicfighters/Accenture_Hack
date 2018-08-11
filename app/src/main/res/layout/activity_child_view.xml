@@ -6,18 +6,122 @@
     android:layout_height="match_parent"
     android:background="@drawable/abstractfront"
     tools:context="com.example.hp.wecarenewedition.ChildViewActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:padding="25dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/checkup1"
+                    android:scaleType="fitXY"
+                    android:id="@+id/image1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:text="@string/last_checkup"
+                    android:layout_gravity="center_horizontal"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_margin="7dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_gravity="left"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:text="@string/checkup_for"
+                        />
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:id="@+id/last_checkup"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="02.08.2018"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_margin="7dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_gravity="right"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:text="@string/time_till_last_checkup"
+                        />
 
+                    <TextView
+                        android:id="@+id/timetilllast_checkup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:text="02"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:text="@string/remarks"
+                        />
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:id="@+id/remarks_checkup"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Very very bad"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:padding="25dp"
             android:layout_margin="10dp"
             android:layout_height="400dp"
-            app:cardCornerRadius="5dp"
+            app:cardCornerRadius="10dp"
             app:cardMaxElevation="8dp">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sugar_report_last_time"
-                android:textColor="#000"
+
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"/>
@@ -37,19 +141,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp">
                 <LinearLayout
-                    android:layout_margin="5dp"
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-
-                    <TextView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
                         android:layout_width="90dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="35dp"
-
-                        android:text="@string/fasting"
-                        android:textSize="15sp"
-                        android:textColor="#0f015e"/>
+                        android:padding="5dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/sugar4"
+                        app:civ_border_color="#000"
+                        app:civ_border_width="1dp" />
                     <com.github.mikephil.charting.charts.HorizontalBarChart
                         android:id="@+id/sugar_fasting"
                         android:layout_width="match_parent"
@@ -63,18 +167,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp">
                     <LinearLayout
-                        android:layout_margin="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
-
-                        <TextView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image1"
                             android:layout_width="90dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="35dp"
-                            android:text="@string/random"
-                            android:textSize="15sp"
-                            android:textColor="#0f015e"/>
+                            android:padding="5dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/sugar3"
+                            app:civ_border_color="#000"
+                            app:civ_border_width="1dp" />
                         <com.github.mikephil.charting.charts.HorizontalBarChart
                             android:id="@+id/sugar_random"
                             android:layout_width="match_parent"
@@ -87,18 +191,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp">
                     <LinearLayout
-                        android:layout_margin="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="35dp"
-                            android:text="@string/pp"
-                            android:textSize="15sp"
-                            android:textColor="#0f015e"/>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image2"
+                            android:layout_width="90dp"
+                            android:padding="5dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/sugar5"
+                            app:civ_border_color="#000"
+                            app:civ_border_width="1dp" />
                         <com.github.mikephil.charting.charts.HorizontalBarChart
                             android:id="@+id/sugar_pp"
                             android:layout_width="match_parent"
@@ -108,23 +213,21 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <LinearLayout
-                    android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/predicted_random_value"
                         android:textSize="18sp"
-                        android:textColor="#0f015e"/>
+                        android:textColor="#000000"/>
                    <TextView
                        android:layout_margin="5dp"
                        android:layout_weight="1"
-                       android:layout_width="wrap_content"
+                       android:layout_width="0dp"
                        android:layout_height="wrap_content"
                        android:text="   120"
                        android:layout_gravity="center"
@@ -140,7 +243,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="10dp"
-            app:cardCornerRadius="5dp">
+            app:cardCornerRadius="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,14 +265,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
-
-                        <TextView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image3"
                             android:layout_width="90dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="35dp"
-                            android:text="@string/systolic"
-                            android:textSize="15sp"
-                            android:textColor="#0f015e"/>
+                            android:padding="5dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/pressure1"
+                            app:civ_border_color="#000"
+                            app:civ_border_width="1dp" />
                         <com.github.mikephil.charting.charts.HorizontalBarChart
                             android:id="@+id/pressure_systolic"
                             android:layout_width="match_parent"
@@ -187,19 +291,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
-
-                        <TextView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image4"
                             android:layout_width="90dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="35dp"
-                            android:text="@string/diastolic"
-                            android:textSize="15sp"
-                            android:textColor="#0f015e"/>
+                            android:padding="5dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/pressure2"
+                            app:civ_border_color="#000"
+                            app:civ_border_width="1dp" />
                         <com.github.mikephil.charting.charts.HorizontalBarChart
                             android:id="@+id/pressure_diastolic"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
-
                         </com.github.mikephil.charting.charts.HorizontalBarChart>
 
                     </LinearLayout>
@@ -232,231 +336,25 @@
 
 
         </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vitals"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"
-                    android:textColor="#000"
-                    android:textSize="25sp"
-                    />
-                <LinearLayout
-                    android:layout_margin="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/height"
-                        android:layout_margin="5dp"/>
-                    <TextView
-                        android:id="@+id/vitals_height"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="175cm"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_margin="5dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/weight"
-                        android:layout_margin="5dp"/>
-                    <TextView
-                        android:id="@+id/vitals_weight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="75kg"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_margin="5dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/change_of_health"
-                        android:layout_margin="5dp"/>
-                    <TextView
-                        android:id="@+id/vitals_change"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No Change"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_margin="5dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/bmi"
-                        android:layout_margin="5dp"/>
-                    <TextView
-                        android:id="@+id/vitals_bmi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="000"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_margin="5dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/remarks"
-                        android:layout_margin="5dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Good"
-                        android:id="@+id/vitals_remark"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_margin="5dp"/>
-                </LinearLayout>
-            </LinearLayout>
 
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:textColor="#000"
-                    android:text="@string/last_checkup"
-                    android:layout_gravity="center_horizontal"/>
-                <LinearLayout
-                    android:layout_margin="7dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_margin="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/checkup_for"
-                        />
-                    <TextView
-                        android:layout_margin="10dp"
-                        android:id="@+id/last_checkup"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="02.08.2018"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="7dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_margin="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/time_till_last_checkup"
-                        />
-                    <TextView
-                        android:layout_margin="10dp"
-                        android:id="@+id/timetilllast_checkup"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="02.082018"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="7dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_margin="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:text="@string/remarks"
-                        />
-                    <TextView
-                        android:layout_margin="10dp"
-                        android:id="@+id/remarks_checkup"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Very very bad"/>
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
 
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             app:cardMaxElevation="15dp"
             android:layout_margin="10dp"
-            app:cardCornerRadius="5dp">
+            app:cardCornerRadius="10dp">
             <LinearLayout
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tips2" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -465,9 +363,11 @@
                     android:textColor="#000"
                     android:text="@string/health_tips"
                     android:layout_gravity="center_horizontal"/>
+
+
                 <Button
                     android:id="@+id/wecare_tips"
-                    android:layout_margin="15dp"
+                    android:layout_margin="5dp"
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -476,7 +376,8 @@
                     android:background="@android:color/transparent"/>
                 <Button
                     android:id="@+id/newhealth_tips"
-                    android:layout_margin="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
