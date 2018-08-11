@@ -59,25 +59,25 @@ public class DisplayPresActivity extends AppCompatActivity {
         i = getIntent();
         id = i.getStringExtra("img");
         img = (ImageView)findViewById(R.id.showimg);
-        save = findViewById(R.id.save);
-
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                downloadthefile(downurl,timestamp);
-                }
-
-
-        });
-        //Toast.makeText(DisplayPresActivity.this, id, Toast.LENGTH_LONG).show();
-        floatingActionButton = findViewById(R.id.fab);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                downloadandprint(downurl,timestamp);
-
-            }
-        });
+//        save = findViewById(R.id.save);
+//
+//        save.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                downloadthefile(downurl,timestamp);
+//                }
+//
+//
+//        });
+//        //Toast.makeText(DisplayPresActivity.this, id, Toast.LENGTH_LONG).show();
+//        floatingActionButton = findViewById(R.id.fab);
+//        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                downloadandprint(downurl,timestamp);
+//
+//            }
+//        });
 
         init();
 
@@ -131,7 +131,7 @@ public class DisplayPresActivity extends AppCompatActivity {
 
                             .into(img);
                     progressDialog.dismiss();
-                    save.setVisibility(View.VISIBLE);
+                    //save.setVisibility(View.VISIBLE);
                 }
             }
 

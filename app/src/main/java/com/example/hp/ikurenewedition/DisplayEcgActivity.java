@@ -64,23 +64,23 @@ public class DisplayEcgActivity extends AppCompatActivity {
         i = getIntent();
         id = i.getStringExtra("id");
         imageView = (ImageView)findViewById(R.id.pdfView);
-        save = findViewById(R.id.saveit);
-        floatingActionButton = findViewById(R.id.print);
-        save.setVisibility(View.INVISIBLE);
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                downloadthefile(downurl,timestamp);
-            }
-        });
-        //Toast.makeText(DisplayEcgActivity.this, id, Toast.LENGTH_LONG).show();
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                downloadandprint(downurl,timestamp);
-
-            }
-        });
+//        save = findViewById(R.id.saveit);
+//        floatingActionButton = findViewById(R.id.print);
+//        save.setVisibility(View.INVISIBLE);
+//        save.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                downloadthefile(downurl,timestamp);
+//            }
+//        });
+//        //Toast.makeText(DisplayEcgActivity.this, id, Toast.LENGTH_LONG).show();
+//        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                downloadandprint(downurl,timestamp);
+//
+//            }
+//        });
 
 
         init();
@@ -126,7 +126,7 @@ public class DisplayEcgActivity extends AppCompatActivity {
                                     .placeholder(R.drawable.ecgtest)
                                     .fitCenter())
                             .into(imageView);
-                        save.setVisibility(View.VISIBLE);
+                        //save.setVisibility(View.VISIBLE);
 
                 }
 
