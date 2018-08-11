@@ -262,7 +262,9 @@ public class ChildViewActivity extends AppCompatActivity {
     }
 
     private void callAPI3() {
-
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Please Wait...." + '\n' + "We are figuring things out");
+        progressDialog.setCancelable(false);
             progressDialog.show();
             ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
             Call<CheckupDetails> call = apiService.getDetails11(pid);
