@@ -63,15 +63,35 @@ public class ChildViewActivity extends AppCompatActivity {
         callAPI2();
         callAPI3();
         //progressDialog.dismiss();
-
     }
 
-    private void setSugarBarChart(int count,int range,float value){
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPressureChat=null;
+        mSugarBarChat =null;
+        progressDialog =null;
+        dy =null;
+        diab_fasting=null;
+        diab_fasting_date =null;
+        diab_pp = null;
+        diab_pp_date =null;
+        diab_random = null;
+        diab_random_date = null;
+        pid = null;
+        syslist = null;
+        dialist = null;
+        textview = null;
+        textView2 = null;
+        timelist = null;
+    }
+
+    private void setSugarBarChart(int count, int range, float value){
         float spaceforBar = 10f;
 
         ArrayList<BarEntry> sugarBar = new ArrayList<>();
         for (int i = 0;i<=count;i++){
-            float val = (float)(Math.random()*value);
+            float val = (float)(Math.random()*range);
             sugarBar.add(new BarEntry(i*spaceforBar, (int) val));
         }
         ArrayList<String> labels = new ArrayList<>();
@@ -94,7 +114,7 @@ public class ChildViewActivity extends AppCompatActivity {
         float spaceforBar = 10f;
         ArrayList<BarEntry> pressureBar = new ArrayList<>();
         for (int i =0; i<=count;i++){
-            float val = (float)(Math.random()*value);
+            float val = (float)(Math.random()*range);
             pressureBar.add(new BarEntry(i*spaceforBar, (int) val));
         }
         ArrayList<String>labels = new ArrayList<>();

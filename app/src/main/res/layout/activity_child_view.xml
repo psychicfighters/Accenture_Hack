@@ -22,7 +22,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/sugar"
+                    android:src="@drawable/checkup1"
                     android:scaleType="fitXY"
                     android:id="@+id/image1"/>
                 <TextView
@@ -131,7 +131,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/sugar1"/>
+                    android:src="@drawable/sugar5"/>
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
@@ -184,7 +184,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/sugar"
+                    android:src="@drawable/pressure1"
                     android:scaleType="fitXY"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -247,7 +247,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/sugar" />
+                    android:src="@drawable/vital" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
