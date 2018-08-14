@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.example.hp.ikurenewedition.R;
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -60,18 +61,34 @@ public class BarGraph extends BottomSheetDialogFragment {
         BarData data = new BarData(labels, bardataset);
         mbarChart.setData(data); // set the data and list of lables into chart
 
-        mbarChart.setDescription("Set Bar Chart Description");  // set the description
-
+        mbarChart.setDescription(null);
+        // set the description
+        mbarChart.getAxisRight().setDrawGridLines(false);
+        mbarChart.getAxisLeft().setDrawGridLines(false);
+        mbarChart.getXAxis().setDrawGridLines(false);
+        mbarChart.getAxisLeft().setDrawLabels(false);
+        mbarChart.getAxisRight().setDrawLabels(false);
+        mbarChart.getXAxis().setDrawLabels(false);
+        mbarChart.setDrawBorders(false);
+        mbarChart.setDrawGridBackground(false);
+        mbarChart.setTouchEnabled(false);
+        mbarChart.setDragEnabled(false);
+        mbarChart.setScaleEnabled(false);
+        mbarChart.setPinchZoom(false);
+        mbarChart.setAutoScaleMinMaxEnabled(true);
+        Legend legend = mbarChart.getLegend();
+        legend.setEnabled(false);
         bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
 
-        mbarChart.animateY(5000);
-        mbarChart.setOnClickListener(new View.OnClickListener() {
+        mbarChart.animateY(2000);
+
+        /*mbarChart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bottomSheetListener.onOptionClick();
                 dismiss();
             }
-        });
+        });*/
         return view;
     }
     public interface BottomSheetListener{
