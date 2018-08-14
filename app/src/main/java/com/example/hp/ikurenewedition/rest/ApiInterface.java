@@ -9,6 +9,7 @@ import com.example.hp.ikurenewedition.pojodatamodels.DifferentVitals;
 import com.example.hp.ikurenewedition.pojodatamodels.EcgListDetail;
 import com.example.hp.ikurenewedition.pojodatamodels.PatientDetails;
 import com.example.hp.ikurenewedition.pojodatamodels.PresListDetail;
+import com.example.hp.ikurenewedition.pojodatamodels.ProbSugar;
 import com.example.hp.ikurenewedition.pojodatamodels.ShowTheEcg;
 import com.example.hp.ikurenewedition.pojodatamodels.ShowTheImage;
 import com.example.hp.ikurenewedition.pojodatamodels.SugarDetail;
@@ -63,6 +64,12 @@ public interface ApiInterface {
     @GET("vital/vitalsrequestdetails")
     Call<CheckupStatus> getDetails12(@Query("pid") String pid,
                                      @Query("timestamp") String timestamp);
+
+    @GET("calculatesugar")
+    Call<ProbSugar> getDetails13(@Query("glucose") String glucose,
+                                 @Query("pressure") String pressure,
+                                 @Query("bmi") String bmi,
+                                 @Query("age") String age);
 
 
 
