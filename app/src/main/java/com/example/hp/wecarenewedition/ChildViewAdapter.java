@@ -1,6 +1,7 @@
 package com.example.hp.wecarenewedition;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.hp.ikurenewedition.R;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyViewHolder> {
@@ -30,7 +32,6 @@ public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyVi
         MyViewHolder holder = new MyViewHolder(itemView);
         return holder;
     }
-
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         ChildViewData all = childViewData.get(position);
@@ -46,6 +47,25 @@ public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyVi
         holder.textView8.setText(all.mPredictedValue);
         holder.textView9.setText(all.randomSugar);
         holder.textView10.setText(all.randomSugarValue);
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position= holder.getAdapterPosition();
+                if(position==0){
+                    Intent intent = new Intent(mContext,BarGraph.class);
+                    intent.putExtra("images",getItemId(position) );
+                    mContext.startActivity(intent);
+                }else if(position==1){
+                    Intent intent1 = new Intent(mContext,BarGraph.class);
+                    intent1.putExtra("images",getItemId(position));
+                    mContext.startActivity(intent1);
+                }else if(position==2){
+                    Intent intent2 = new Intent(mContext,BarGraph.class);
+                    intent2.putExtra("images",getItemId(position));
+                    mContext.startActivity(intent2);
+                }
+            }
+        });
     }
     @Override
     public int getItemCount() {

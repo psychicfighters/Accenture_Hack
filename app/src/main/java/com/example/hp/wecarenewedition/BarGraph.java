@@ -20,6 +20,7 @@ import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 /**
@@ -27,6 +28,7 @@ import java.util.ArrayList;
  */
 public class BarGraph extends BottomSheetDialogFragment {
     private BottomSheetListener bottomSheetListener;
+    private String pid;
 
 
     public BarGraph() {
@@ -37,6 +39,8 @@ public class BarGraph extends BottomSheetDialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Intent intent = Objects.requireNonNull(getActivity()).getIntent();
+        pid = intent.getStringExtra("patient");
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bar_graph, container, false);
         BarChart mbarChart = view.findViewById(R.id.barchart);

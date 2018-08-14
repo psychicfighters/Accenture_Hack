@@ -18,9 +18,9 @@
     <string name="systolic_hint">Systolic(mm of Hg)</string>
     <string name="diastolic_hint">Diastolic(mm of Hg)</string>
     <string name="enter">Enter</string>
-    <string name="fasting_hint">Fasting(mg/dl)</string>
-    <string name="pp_hint">Post Prandial(mg/dl) </string>
-    <string name="random_hint">Random(mg/dl)</string>
+    <string name="fasting_hint">Fasting(ppmg/dl)</string>
+    <string name="pp_hint">Post Prandial(ppmg/dl) </string>
+    <string name="random_hint">Random(ppmg/dl)</string>
     <string name="checkup_req">Checkup Requests</string>
     <string name="service_req">Services Requested:</string>
     <string name="token">Token</string>

@@ -211,15 +211,9 @@
                         android:layout_marginTop="10dp"
                         android:textSize="18sp"
                         android:text="120 "/>
-
                 </LinearLayout>
             </LinearLayout>
-
-
         </android.support.v7.widget.CardView>
-
-
-
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -248,7 +242,6 @@
                 <Button
                     android:id="@+id/wecare_tips"
                     android:layout_margin="5dp"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/we_care_health_tips"

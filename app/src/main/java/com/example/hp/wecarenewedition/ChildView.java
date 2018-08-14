@@ -24,18 +24,15 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
     List<ChildViewData> childViewData;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child_view2);
-
         Intent intent = getIntent();
         pid = intent.getStringExtra("patient");
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
         ArrayList<ChildViewData> childViewData = new ArrayList<>();
         childViewData.add(new ChildViewData(R.drawable.checkup1,R.string.checkup_req,R.string.time,R.string.last_checkup,R.string.time,R.string.service_req,
                 R.string.remarks,R.string.good,R.string.predicted_random_value,R.string.time,R.string.random_hint,R.string.time));
