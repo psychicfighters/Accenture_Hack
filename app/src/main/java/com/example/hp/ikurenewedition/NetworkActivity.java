@@ -24,6 +24,7 @@ import com.example.hp.ikurenewedition.dataclass.Data_class;
 import com.example.hp.ikurenewedition.pojodatamodels.CardDetails;
 import com.example.hp.ikurenewedition.rest.ApiClient;
 import com.example.hp.ikurenewedition.rest.ApiInterface;
+import com.example.hp.wecarenewedition.ChildView;
 import com.example.hp.wecarenewedition.ChildViewActivity;
 import com.example.hp.wecarenewedition.ParentLogin;
 import com.example.hp.wecarenewedition.VolunteerActivity;
@@ -118,9 +119,7 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
 //        Intent i=new Intent(NetworkActivity.this,MainActivity.class);
         finish();
         //startActivity(i);
-
     }
-
     @Override
     protected void onDestroy() {
 
@@ -136,7 +135,6 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
         url = null;
         org = null;
     }
-
     private void callAPI1(){
         if (!start)
             progressDialog.show();
@@ -267,7 +265,7 @@ void execute(){
     if(m_Text.equals(org)){
 
         Intent k;
-        k = new Intent(NetworkActivity.this, ChildViewActivity.class);
+        k = new Intent(NetworkActivity.this, ChildView.class);
         k.putExtra("patient", url);
         k.putExtra("card_no", patient);
         k.putExtra("patient_name", name);

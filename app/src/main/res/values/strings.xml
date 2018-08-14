@@ -93,5 +93,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="time">200</string>
+    <string name="good">Good</string>
+    <string name="sucrose_level">Sucrose Level(mg/dl)</string>
+    <string name="bmi1">BMI</string>
+    <string name="age1">Age</string>
     <string name="title_activity_child_login">Sign in</string>
 </resources>

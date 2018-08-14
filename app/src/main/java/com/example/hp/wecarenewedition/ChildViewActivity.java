@@ -56,8 +56,8 @@ public class ChildViewActivity extends AppCompatActivity {
         pid = intent.getStringExtra("patient");
         textview = findViewById(R.id.last_checkup);
         textView2 = findViewById(R.id.timetilllast_checkup);
-        mSugarBarChat = (HorizontalBarChart)findViewById(R.id.sugar_barchart);
-        mPressureChat = (HorizontalBarChart)findViewById(R.id.pressure_barchart);
+        //mSugarBarChat = (HorizontalBarChart)findViewById(R.id.sugar_barchart);
+        //mPressureChat = (HorizontalBarChart)findViewById(R.id.pressure_barchart);
         setSugarBarChart(0,250,70);
         setSugarBarChart(1,350,120);
         setSugarBarChart(2,250,110);

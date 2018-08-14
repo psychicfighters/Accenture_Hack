@@ -42,7 +42,7 @@
         </provider>
 
         <activity
-            android:name="com.example.hp.ikurenewedition.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar">
@@ -53,7 +53,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.Welcome"
+            android:name=".Welcome"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -63,7 +63,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.AfterSplash"
+            android:name=".AfterSplash"
             android:label="@string/app_name"
             android:noHistory="false"
             android:theme="@style/AppTheme.NoActionBar">
@@ -73,7 +73,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hp.ikurenewedition.NetworkActivity">
+        <activity android:name=".NetworkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -81,7 +81,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.OnePerson"
+            android:name=".OnePerson"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -90,14 +90,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hp.ikurenewedition.DisplayEcgActivity">
+        <activity android:name=".DisplayEcgActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hp.ikurenewedition.DisplayPresActivity">
+        <activity android:name=".DisplayPresActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -105,7 +105,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.Blood_Pressure_Graph"
+            android:name=".Blood_Pressure_Graph"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -114,7 +114,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.DiabetesGraphActivity"
+            android:name=".DiabetesGraphActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -123,7 +123,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.Diabetes_Graph_PP"
+            android:name=".Diabetes_Graph_PP"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -132,7 +132,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.Diabetes_Graph_Random"
+            android:name=".Diabetes_Graph_Random"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -140,21 +140,21 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hp.ikurenewedition.VitalsDetailsActivity">
+        <activity android:name=".VitalsDetailsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hp.ikurenewedition.BMICALC">
+        <activity android:name=".BMICALC">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hp.ikurenewedition.CheckupDetailsActivity">
+        <activity android:name=".CheckupDetailsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -162,7 +162,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hp.ikurenewedition.RequestService"
+            android:name=".RequestService"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -182,6 +182,8 @@
         <activity android:name="com.example.hp.wecarenewedition.BloodPressure" />
         <activity android:name="com.example.hp.wecarenewedition.BloodSugar" />
         <activity android:name="com.example.hp.wecarenewedition.VitalReports" />
+        <activity android:name="com.example.hp.wecarenewedition.ChildView" />
+        <activity android:name="com.example.hp.wecarenewedition.PredictedSugar"></activity>
     </application>
 
 </manifest>
