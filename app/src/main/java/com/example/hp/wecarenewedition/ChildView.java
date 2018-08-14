@@ -13,11 +13,12 @@ import android.widget.Button;
 
 import com.example.hp.ikurenewedition.MainActivity;
 import com.example.hp.ikurenewedition.R;
+import com.github.mikephil.charting.charts.BarChart;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChildView extends AppCompatActivity {
+public class ChildView extends AppCompatActivity implements BarGraph.BottomSheetListener {
     private String pid;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -54,6 +55,15 @@ public class ChildView extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btnBarGraph = findViewById(R.id.popup);
+        btnBarGraph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BarGraph barGraph = new BarGraph();
+                barGraph.show(getSupportFragmentManager(),"BarGraph");
+
+            }
+        });
 
     }
     @Override
@@ -72,4 +82,9 @@ public class ChildView extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onOptionClick() {
+        recyclerView.setAdapter(adapter);
+
+    }
 }

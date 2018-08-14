@@ -24,4 +24,13 @@
         android:layout_marginBottom="13dp"
         android:background="@drawable/circ_button2"
         android:text="Are You Diabetic??"/>
+
+    <Button
+        android:id="@+id/popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/sugar_level"
+        android:background="@android:color/transparent"
+        android:text="popup" />
 </RelativeLayout>
