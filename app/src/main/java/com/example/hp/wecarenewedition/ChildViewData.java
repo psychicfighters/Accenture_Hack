@@ -2,22 +2,22 @@ package com.example.hp.wecarenewedition;
 
 public class ChildViewData  {
     public int mImageIdl;
-    public int mCheck;
-    public int mCheckup;
-    public int mLastCheckup;
-    public int mTimeTillLastCheckup;
-    public int mServiceType;
-    public int mRemarks;
-    public int mRemarksType;
-    public int mPredicted;
-    public int mPredictedValue;
-    public int randomSugar;
-    public int randomSugarValue;
+    public String mCheck; //checkup last date text
+    public String mCheckup; // last date
+    public String mLastCheckup; //text time till last
+    public String mTimeTillLastCheckup; // time
+    public String mServiceType; //header
+    public String mRemarks; //remarks text
+    public String mRemarksType; // remarks
+    public String mPredicted; // text predicted
+    public String mPredictedValue; // value
+    public String randomSugar; // text head
+    public String randomSugarValue; // value
 
 
-    ChildViewData (int mImageIdl,int mCheck,int mCheckup,int mLastCheckup,int mTimeTillLastCheckup
-                 ,int mServiceType,int mRemarks,int mRemarksType,int mPredicted,int mPredictedValue,
-                   int randomSugar,int randomSugarValue){
+    ChildViewData (int mImageIdl, String mCheck, String mCheckup, String mLastCheckup, String mTimeTillLastCheckup
+                 , String mServiceType, String mRemarks, String mRemarksType, String mPredicted, String mPredictedValue,
+                   String randomSugar, String randomSugarValue){
 
         this.mImageIdl = mImageIdl;
         this.mCheck = mCheck;

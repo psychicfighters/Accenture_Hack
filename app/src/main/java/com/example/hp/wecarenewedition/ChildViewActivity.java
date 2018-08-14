@@ -66,7 +66,7 @@ public class ChildViewActivity extends AppCompatActivity {
 
         //callAPI1();
         //callAPI2();
-        callAPI3();
+        //callAPI3();
         //progressDialog.dismiss();
     }
 

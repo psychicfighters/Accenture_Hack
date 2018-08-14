@@ -50,20 +50,22 @@ public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyVi
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int position= holder.getAdapterPosition();
-                if(position==0){
-                    Intent intent = new Intent(mContext,BarGraph.class);
-                    intent.putExtra("images",getItemId(position) );
-                    mContext.startActivity(intent);
-                }else if(position==1){
-                    Intent intent1 = new Intent(mContext,BarGraph.class);
-                    intent1.putExtra("images",getItemId(position));
-                    mContext.startActivity(intent1);
-                }else if(position==2){
-                    Intent intent2 = new Intent(mContext,BarGraph.class);
-                    intent2.putExtra("images",getItemId(position));
-                    mContext.startActivity(intent2);
-                }
+
+
+//                int position= holder.getAdapterPosition();
+//                if(position==0){
+//                    Intent intent = new Intent(mContext,BarGraph.class);
+//                    intent.putExtra("images",getItemId(position) );
+//                    mContext.startActivity(intent);
+//                }else if(position==1){
+//                    Intent intent1 = new Intent(mContext,BarGraph.class);
+//                    intent1.putExtra("images",getItemId(position));
+//                    mContext.startActivity(intent1);
+//                }else if(position==2){
+//                    Intent intent2 = new Intent(mContext,BarGraph.class);
+//                    intent2.putExtra("images",getItemId(position));
+//                    mContext.startActivity(intent2);
+//                }
             }
         });
     }
