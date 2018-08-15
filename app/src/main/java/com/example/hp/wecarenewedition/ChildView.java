@@ -73,8 +73,18 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
         adapter = new ChildViewAdapter(this, childViewData, new RecyclerClickListener() {
             @Override
             public void onClick(View view, int position) {
+                if(childViewData.get(position).mImageIdl == R.drawable.sugar5){
+                    ((BarGraph)barGraph).set(diab_random,diab_random_date);
+                    barGraph.show(getSupportFragmentManager(),"BarGraph");
 
-                barGraph.show(getSupportFragmentManager(),"BarGraph");
+                }
+                else if(childViewData.get(position).mImageIdl == R.drawable.pressure1){
+                    ((BarGraph)barGraph).set(dialist,syslist);
+                    barGraph.show(getSupportFragmentManager(),"BarGraph");
+
+                }
+
+
             }
         });
         recyclerView.setAdapter(adapter);

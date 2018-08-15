@@ -30,6 +30,8 @@ public class BarGraph extends BottomSheetDialogFragment {
     private BottomSheetListener bottomSheetListener;
     private String pid;
     private int type = 0;
+    private ArrayList<String> diab_random = new ArrayList<>();
+    private ArrayList<String> diab_random_date = new ArrayList<>();
 
 
     public BarGraph() {
@@ -45,22 +47,31 @@ public class BarGraph extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.fragment_bar_graph, container, false);
         BarChart mbarChart = view.findViewById(R.id.barchart);
         ArrayList<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(8f, 0));
-        entries.add(new BarEntry(2f, 1));
-        entries.add(new BarEntry(5f, 2));
-        entries.add(new BarEntry(20f, 3));
-        entries.add(new BarEntry(15f, 4));
-        entries.add(new BarEntry(19f, 5));
+        for(int i = 0; i< diab_random.size(); i++){
+            entries.add(new BarEntry(Float.parseFloat(diab_random.get(i)), i));
+        }
+
+//        entries.add(new BarEntry(2f, 1));
+//        entries.add(new BarEntry(5f, 2));
+//        entries.add(new BarEntry(20f, 3));
+//        entries.add(new BarEntry(15f, 4));
+//        entries.add(new BarEntry(19f, 5));
 
         BarDataSet bardataset = new BarDataSet(entries, "Cells");
 
         ArrayList<String> labels = new ArrayList<String>();
-        labels.add("2016");
-        labels.add("2015");
-        labels.add("2014");
-        labels.add("2013");
-        labels.add("2012");
-        labels.add("2011");
+        for(int i = 0; i< diab_random.size(); i++) {
+           labels.add(diab_random_date.get(i));
+
+        }
+            //labels.add("2016");
+
+
+        //        labels.add("2015");
+//        labels.add("2014");
+//        labels.add("2013");
+//        labels.add("2012");
+//        labels.add("2011");
 
         BarData data = new BarData(labels, bardataset);
         mbarChart.setData(data); // set the data and list of lables into chart
@@ -84,7 +95,7 @@ public class BarGraph extends BottomSheetDialogFragment {
         legend.setEnabled(false);
         bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
 
-        mbarChart.animateY(2000);
+        mbarChart.animateY(700);
 
         /*mbarChart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +120,8 @@ public class BarGraph extends BottomSheetDialogFragment {
             throw new ClassCastException(context.getPackageName());
         }
     }
-    public void set(int typ){
-        type = typ;
+    public void set(ArrayList<String> diab_random1, ArrayList<String> diab_random_date1){
+        diab_random = diab_random1;
+        diab_random_date = diab_random_date1;
     }
 }
