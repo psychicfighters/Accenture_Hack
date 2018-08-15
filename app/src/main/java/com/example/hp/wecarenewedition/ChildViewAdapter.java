@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hp.ikurenewedition.R;
 
@@ -20,16 +21,27 @@ import java.util.List;
 public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyViewHolder> {
     List<ChildViewData> childViewData;
     Context mContext;
-    public ChildViewAdapter(Context mContext,List<ChildViewData>childViewData){
+    RecyclerClickListener listener;
+
+    public ChildViewAdapter(Context mContext,List<ChildViewData>childViewData,RecyclerClickListener listener){
         this.mContext = mContext;
         this.childViewData = childViewData;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.chilld_card,parent,false);
-        MyViewHolder holder = new MyViewHolder(itemView);
+        final MyViewHolder holder = new MyViewHolder(itemView);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                //listener.onClick(v,holder.getAdapterPosition());
+                Toast.makeText(v.getContext(), "Toast "+position, Toast.LENGTH_SHORT).show();
+            }
+        });
         return holder;
     }
     @Override
@@ -47,9 +59,11 @@ public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyVi
         holder.textView8.setText(all.mPredictedValue);
         holder.textView9.setText(all.randomSugar);
         holder.textView10.setText(all.randomSugarValue);
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
+       /* holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int position= holder.getAdapterPosition();
+                Toast.makeText(v.getContext(), getItemViewType(position), Toast.LENGTH_SHORT).show();
 
 
 //                int position= holder.getAdapterPosition();
@@ -67,7 +81,7 @@ public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyVi
 //                    mContext.startActivity(intent2);
 //                }
             }
-        });
+        });*/
     }
     @Override
     public int getItemCount() {

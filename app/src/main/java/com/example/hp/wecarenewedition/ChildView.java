@@ -69,7 +69,7 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
         callAPI3();
         //progressDialog.dismiss();
 
-        adapter = new ChildViewAdapter(this, childViewData);
+        adapter = new ChildViewAdapter(this, childViewData,listener);
         recyclerView.setAdapter(adapter);
 
         Button btnChildView = findViewById(R.id.sugar_level);
