@@ -38,8 +38,8 @@ public class ChildViewAdapter extends RecyclerView.Adapter<ChildViewAdapter.MyVi
             @Override
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
-                //listener.onClick(v,holder.getAdapterPosition());
-                Toast.makeText(v.getContext(), "Toast "+position, Toast.LENGTH_SHORT).show();
+                listener.onClick(v, holder.getAdapterPosition());
+                //Toast.makeText(v.getContext(), "Toast "+position, Toast.LENGTH_SHORT).show();
             }
         });
         return holder;

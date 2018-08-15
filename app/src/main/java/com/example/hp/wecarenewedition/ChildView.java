@@ -53,6 +53,7 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
     int k1, k2, k3 = 0;
     ArrayList<ChildViewData> childViewData = new ArrayList<>();
     RecyclerClickListener listener;
+    BarGraph barGraph = new BarGraph();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +70,13 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
         callAPI3();
         //progressDialog.dismiss();
 
-        adapter = new ChildViewAdapter(this, childViewData,listener);
+        adapter = new ChildViewAdapter(this, childViewData, new RecyclerClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+
+                barGraph.show(getSupportFragmentManager(),"BarGraph");
+            }
+        });
         recyclerView.setAdapter(adapter);
 
         Button btnChildView = findViewById(R.id.sugar_level);

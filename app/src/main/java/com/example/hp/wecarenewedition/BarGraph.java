@@ -29,6 +29,7 @@ import java.util.Objects;
 public class BarGraph extends BottomSheetDialogFragment {
     private BottomSheetListener bottomSheetListener;
     private String pid;
+    private int type = 0;
 
 
     public BarGraph() {
@@ -39,8 +40,7 @@ public class BarGraph extends BottomSheetDialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Intent intent = Objects.requireNonNull(getActivity()).getIntent();
-        pid = intent.getStringExtra("patient");
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bar_graph, container, false);
         BarChart mbarChart = view.findViewById(R.id.barchart);
@@ -108,5 +108,8 @@ public class BarGraph extends BottomSheetDialogFragment {
         catch (ClassCastException e){
             throw new ClassCastException(context.getPackageName());
         }
+    }
+    public void set(int typ){
+        type = typ;
     }
 }
