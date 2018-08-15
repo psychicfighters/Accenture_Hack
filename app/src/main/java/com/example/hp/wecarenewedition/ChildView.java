@@ -87,17 +87,6 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
                 startActivity(intent);
             }
         });
-        Button btnBarGraph = findViewById(R.id.popup);
-        btnBarGraph.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BarGraph barGraph = new BarGraph();
-                barGraph.show(getSupportFragmentManager(),"BarGraph");
-
-            }
-        });
-
-
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -173,9 +162,9 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
                             if(diab_random.get(0) == null)
                                 diab_random.add("N.A");
 
-                        childViewData.add(new ChildViewData(R.drawable.sugar5, "Last Fasting(mg/dl)",
-                                diab_fasting.get(0),"Last PP(mg/dl)",diab_pp.get(0),"Blood Sugar Reports",
-                                "Last Random(mg/dl)",diab_random.get(0),"Predicted Random","167","",""));
+                        childViewData.add(new ChildViewData(R.drawable.sugar5, "Fasting",
+                                diab_fasting.get(0),"PP",diab_pp.get(0),"Last Blood Sugar Reports",
+                                "Random",diab_random.get(0),"Predicted Random","167","*Unit(mg/dl)",""));
                         adapter.notifyDataSetChanged();
                     }
                 }
@@ -216,9 +205,9 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
                         if(dialist.get(0) == null)
                             dialist.add("N.A");
 
-                        childViewData.add(new ChildViewData(R.drawable.pressure1,"Last Systolic",
-                                syslist.get(0),"","","Blood Pressure Report",
-                                "Last Diastolic",dialist.get(0),"","","",""));
+                        childViewData.add(new ChildViewData(R.drawable.pressure1,"Systolic",
+                                syslist.get(0),"","","Last Blood Pressure Report",
+                                "Diastolic",dialist.get(0),"","","*Unit(mm of Hg)",""));
                         adapter.notifyDataSetChanged();
                     }
 
@@ -269,9 +258,9 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
                             var = "0";
                             sch = "Perfect";
                         }
-                        childViewData.add(new ChildViewData(R.drawable.checkup1,"Last Service",convert(val),"Days from Last Checkup",var,
+                        childViewData.add(new ChildViewData(R.drawable.checkup1,"Last Service",convert(val),"","",
                                 "Services Provided",
-                                "Remarks",sch,"","","",""));
+                                "Days from Last Checkup",var,"Remarks",sch,"",""));
                         adapter.notifyDataSetChanged();
                     }
                 }
