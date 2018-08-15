@@ -1,10 +1,12 @@
 package com.example.hp.wecarenewedition;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -30,8 +32,7 @@ public class PredictedSugar extends AppCompatActivity {
     private String age;
     private ProgressDialog progressDialog;
     private ImageView imageview;
-
-
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +42,8 @@ public class PredictedSugar extends AppCompatActivity {
         editText3 = findViewById(R.id.bmi_level);
         editText4 = findViewById(R.id.age_level);
         imageview = findViewById(R.id.sugarLevelImage);
-
-
+        hideSoftKeyboard();
         Button btnChildView = findViewById(R.id.checking_diabetic);
-
         btnChildView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +54,6 @@ public class PredictedSugar extends AppCompatActivity {
                 if(Objects.equals(sucrose, "") || Objects.equals(dias, "") ||
                         Objects.equals(bmi, "") || Objects.equals(age, "")){
                     Toast.makeText(PredictedSugar.this, "Please Enter all the Values", Toast.LENGTH_LONG).show();
-
                 }
                 else{
                     callAPI();
@@ -63,14 +61,18 @@ public class PredictedSugar extends AppCompatActivity {
             }
         });
     }
-
+    private void hideSoftKeyboard(){
+        if(getCurrentFocus()!=null && getCurrentFocus() instanceof EditText){
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(editText4.getWindowToken(), 0);
+        }
+    }
     private void callAPI() {
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Please Wait...." + '\n' + "We are figuring things out");
         progressDialog.setCancelable(false);
         progressDialog.show();
         imageview.setVisibility(View.INVISIBLE);
-
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<ProbSugar> call = apiService.getDetails13(sucrose, dias, bmi, age);
         call.enqueue(new Callback<ProbSugar>() {
@@ -79,17 +81,15 @@ public class PredictedSugar extends AppCompatActivity {
                 progressDialog.dismiss();
                 if(Integer.parseInt(response.body().getSugar()) == 1)
                     imageview.setImageResource(R.drawable.ifsugartrue);
-
                 else
                     imageview.setImageResource(R.drawable.ifsugarfalse);
-
                 imageview.setVisibility(View.VISIBLE);
             }
-
             @Override
             public void onFailure(Call<ProbSugar> call, Throwable t) {
                 progressDialog.dismiss();
             }
         });
     }
+
 }

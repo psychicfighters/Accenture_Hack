@@ -24,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
+                android:imeOptions="actionDone"
                 android:hint="@string/sucrose_level" />
             <EditText
 
@@ -33,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
+                android:imeOptions="actionDone"
                 android:hint="@string/diastolic_hint" />
         </LinearLayout>
         <LinearLayout
@@ -47,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
+                android:imeOptions="actionDone"
                 android:hint="@string/age1" />
             <EditText
                 android:layout_weight="1"
@@ -55,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
+                android:imeOptions="actionDone"
                 android:hint="@string/bmi1" />
         </LinearLayout>
         <Button
