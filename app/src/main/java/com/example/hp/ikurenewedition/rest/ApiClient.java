@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ApiClient {
-    public static final String BASE_URL = "http://gcecthacks-accenturehackgcect.193b.starter-ca-central-1.openshiftapps.com/";
+    public static final String BASE_URL = "";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient(){
