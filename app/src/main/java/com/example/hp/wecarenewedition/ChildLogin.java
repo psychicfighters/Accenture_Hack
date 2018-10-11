@@ -32,10 +32,6 @@ public class ChildLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         SharedPreferences.Editor editor = pref.edit();
-////        editor.putString("token", "PA7646");
-////        editor.apply();
-//        editor.clear();
-//        editor.apply();
         child_token = pref.getString("child_token", null);
         setContentView(R.layout.activity_child_login);
 
@@ -46,9 +42,6 @@ public class ChildLogin extends AppCompatActivity {
 
         else{
             Intent i = new Intent(ChildLogin.this, NetworkActivity.class);
-            //finish();
-            //String token = pref.getString("token", null);
-//                Toast.makeText(ParentLogin.this, token, Toast.LENGTH_LONG).show();
             i.putExtra("Patient_no", child_token);
             i.putExtra("from", "child");
             startActivity(i);
@@ -97,9 +90,6 @@ public class ChildLogin extends AppCompatActivity {
                                     editor.putString("child_token", val);
                                     editor.apply();
                                     Intent i = new Intent(ChildLogin.this, NetworkActivity.class);
-                                    //finish();
-                                    //String token = pref.getString("token", null);
-//                Toast.makeText(ParentLogin.this, token, Toast.LENGTH_LONG).show();
                                     i.putExtra("Patient_no", val);
                                     i.putExtra("from", "child");
                                     startActivity(i);
