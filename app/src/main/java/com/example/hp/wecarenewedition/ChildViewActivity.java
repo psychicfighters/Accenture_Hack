@@ -64,10 +64,7 @@ public class ChildViewActivity extends AppCompatActivity {
         setPressureBarChart(0,200,90);
         setPressureBarChart(1,200,110);
 
-        //callAPI1();
-        //callAPI2();
-        //callAPI3();
-        //progressDialog.dismiss();
+
     }
 
     @Override
@@ -158,10 +155,6 @@ public class ChildViewActivity extends AppCompatActivity {
                     if (result != null) {
                         if (result.body().getSugarlist().size() > 0) {
                             for (int i = 0; i < result.body().getSugarlist().size(); i++) {
-//                                dy.add(i, new Data_class_four(result.body().getSugarlist().get(i).getSugarFirst(),
-//                                        result.body().getSugarlist().get(i).getSugarPp(),
-//                                        result.body().getSugarlist().get(i).getSugarRandom(),
-//                                        convert(Float.valueOf(result.body().getSugarlist().get(i).getTimestamp()))));
 
                                 if (!Objects.equals(result.body().getSugarlist().get(i).getSugarFirst(), "NIL")) {
                                     diab_fasting.add(k1, result.body().getSugarlist().get(i).getSugarFirst());
@@ -217,10 +210,6 @@ public class ChildViewActivity extends AppCompatActivity {
     private void callAPI2(){
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<BPDetails> call = apiService.getDetails10(pid);
-//        progressDialog = new ProgressDialog(this);
-//        progressDialog.setMessage("Please Wait...." + '\n' + "We are figuring things out");
-//        progressDialog.setCancelable(false);
-//        progressDialog.show();
         call.enqueue(new Callback<BPDetails>() {
             @Override
             public void onResponse(Call<BPDetails> call, Response<BPDetails> response) {

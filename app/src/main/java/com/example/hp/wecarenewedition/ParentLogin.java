@@ -61,10 +61,6 @@ public class ParentLogin extends AppCompatActivity {
         int ext = intent_get.getIntExtra("val", 100);
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         SharedPreferences.Editor editor = pref.edit();
-////        editor.putString("token", "PA7646");
-////        editor.apply();
-//        editor.clear();
-//        editor.apply();
          token = pref.getString("token", null);
 
         setContentView(R.layout.activity_parent_login);
@@ -95,16 +91,6 @@ public class ParentLogin extends AppCompatActivity {
 
 
 
-        //Skip button to be removed
-
-//        Button btnParentLoginToHome = findViewById(R.id.btn_skip);
-//        btnParentLoginToHome.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(ParentLogin.this,AfterSplash.class);
-//                startActivity(intent);
-//            }
-//        });
 
         // Progress dialog
         progressDialog = new ProgressDialog(this);
