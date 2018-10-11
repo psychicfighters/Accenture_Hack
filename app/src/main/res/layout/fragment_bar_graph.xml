@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:paddingBottom="@dimen/fab_margin"
+    android:paddingLeft="@dimen/fab_margin"
+    android:paddingRight="@dimen/fab_margin"
     android:background="@drawable/abstractfront"
-    android:paddingTop="16dp"
+    android:paddingTop="@dimen/fab_margin"
     tools:context="com.example.hp.wecarenewedition.BarGraph">
     <!-- TODO: Update blank fragment layout -->
     <com.github.mikephil.charting.charts.BarChart

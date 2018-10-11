@@ -37,10 +37,10 @@ public class BloodPressure extends AppCompatActivity {
 
         Intent intent = getIntent();
         pid = intent.getStringExtra("patient");
-        systolicInput = (EditText) findViewById(R.id.systolic);
-        diastolicInput = (EditText) findViewById(R.id.diastolic);
+        systolicInput = findViewById(R.id.systolic);
+        diastolicInput =  findViewById(R.id.diastolic);
 
-        btnEnter = (Button) findViewById(R.id.btnEnter);
+        btnEnter = findViewById(R.id.btnEnter);
 
         btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class BloodPressure extends AppCompatActivity {
         sendData.setSys(systolic);
 
         progressDialog = new ProgressDialog(BloodPressure.this);
-        progressDialog.setMessage("Please Wait...." + '\n' + "We are figuring things out");
+        progressDialog.setMessage("Please Wait...." + '\n' + "We are figuring things out this ..");
         progressDialog.setCancelable(false);
 
 
@@ -81,7 +81,7 @@ public class BloodPressure extends AppCompatActivity {
             public void onResponse(Call<BpUploadResult> call, Response<BpUploadResult> response) {
                 progressDialog.dismiss();
                 if(!response.body().getError()) {
-                    Toast.makeText(BloodPressure.this, "Uploaded Successfully!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BloodPressure.this, "Uploaded Successfully!!", Toast.LENGTH_LONG).show();
                     finish();
                 }
             }
@@ -89,7 +89,7 @@ public class BloodPressure extends AppCompatActivity {
             @Override
             public void onFailure(Call<BpUploadResult> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(BloodPressure.this, "Sorry Couldn't be Uploaded!", Toast.LENGTH_LONG).show();
+                Toast.makeText(BloodPressure.this, "Sorry..... Couldn't be Uploaded!", Toast.LENGTH_LONG).show();
             }
         });
 

@@ -102,4 +102,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="we_care">We Care</string>
+    <string name="for_a_better_life">For A better Life</string>
+    <string name="this_is_page1">This is page 1</string>
 </resources>

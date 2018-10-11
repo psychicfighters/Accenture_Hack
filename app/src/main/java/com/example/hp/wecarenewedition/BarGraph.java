@@ -28,7 +28,6 @@ import java.util.Objects;
  */
 public class BarGraph extends BottomSheetDialogFragment {
     private BottomSheetListener bottomSheetListener;
-    private String pid;
     private int type = 0;
     private ArrayList<String> diab_random = new ArrayList<>();
     private ArrayList<String> diab_random_date = new ArrayList<>();
@@ -51,11 +50,6 @@ public class BarGraph extends BottomSheetDialogFragment {
             entries.add(new BarEntry(Float.parseFloat(diab_random.get(i)), i));
         }
 
-//        entries.add(new BarEntry(2f, 1));
-//        entries.add(new BarEntry(5f, 2));
-//        entries.add(new BarEntry(20f, 3));
-//        entries.add(new BarEntry(15f, 4));
-//        entries.add(new BarEntry(19f, 5));
 
         BarDataSet bardataset = new BarDataSet(entries, "Cells");
 
@@ -64,14 +58,6 @@ public class BarGraph extends BottomSheetDialogFragment {
            labels.add(diab_random_date.get(i));
 
         }
-            //labels.add("2016");
-
-
-        //        labels.add("2015");
-//        labels.add("2014");
-//        labels.add("2013");
-//        labels.add("2012");
-//        labels.add("2011");
 
         BarData data = new BarData(labels, bardataset);
         mbarChart.setData(data); // set the data and list of lables into chart
@@ -96,14 +82,6 @@ public class BarGraph extends BottomSheetDialogFragment {
         bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
 
         mbarChart.animateY(700);
-
-        /*mbarChart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomSheetListener.onOptionClick();
-                dismiss();
-            }
-        });*/
         return view;
     }
     public interface BottomSheetListener{
