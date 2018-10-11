@@ -68,7 +68,7 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
         callAPI1();
         callAPI2();
         callAPI3();
-        //progressDialog.dismiss();
+
 
         adapter = new ChildViewAdapter(this, childViewData, new RecyclerClickListener() {
             @Override
@@ -100,9 +100,7 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -143,10 +141,6 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
                     if (result != null) {
                         if (result.body().getSugarlist().size() > 0) {
                             for (int i = 0; i < result.body().getSugarlist().size(); i++) {
-//                                dy.add(i, new Data_class_four(result.body().getSugarlist().get(i).getSugarFirst(),
-//                                        result.body().getSugarlist().get(i).getSugarPp(),
-//                                        result.body().getSugarlist().get(i).getSugarRandom(),
-//                                        convert(Float.valueOf(result.body().getSugarlist().get(i).getTimestamp()))));
 
                                 if (!Objects.equals(result.body().getSugarlist().get(i).getSugarFirst(), "NIL")) {
                                     diab_fasting.add(k1, result.body().getSugarlist().get(i).getSugarFirst());
@@ -275,16 +269,7 @@ public class ChildView extends AppCompatActivity implements BarGraph.BottomSheet
                     }
                 }
 
-//                else{
-//                    float val = Collections.max(timelist);
-//                    textview.setText(convert(val));
-//                    double time= System.currentTimeMillis();
-//                    if((time - val) > 0 )
-//                        textView2.setText(String.valueOf(((time - val) / (1000*60*60*24))));
-//                    else
-//                        textView2.setText("Scheduled Acurately");
-//
-//                }
+
 
             }
 
