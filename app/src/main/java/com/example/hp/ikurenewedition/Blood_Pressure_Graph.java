@@ -60,7 +60,7 @@ public class Blood_Pressure_Graph extends AppCompatActivity implements OnChartGe
         Collections.reverse(diastolic);
         Collections.reverse(timestamp);
 
-        mChart = (LineChart) findViewById(R.id.chart);
+        mChart =  findViewById(R.id.chart);
         mChart.setOnChartGestureListener(this);
         mChart.setOnChartValueSelectedListener(this);
         mChart.setDrawGridBackground(false);
@@ -68,13 +68,7 @@ public class Blood_Pressure_Graph extends AppCompatActivity implements OnChartGe
 
 
 
-     /*   greatest = Float.parseFloat(systolic[0]);
-        for (int j = 1; j < 5; j++) {
-            if (Float.parseFloat(systolic[j]) > greatest) {
-                greatest = Float.parseFloat(systolic[j]);
-            }
-        }
-    */
+
         setData();
         Legend l = mChart.getLegend();
 
@@ -302,3 +296,4 @@ public class Blood_Pressure_Graph extends AppCompatActivity implements OnChartGe
 
 
 }
+//upated by sumit

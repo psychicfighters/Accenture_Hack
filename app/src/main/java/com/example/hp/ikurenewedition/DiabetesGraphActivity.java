@@ -61,7 +61,7 @@ public class DiabetesGraphActivity extends AppCompatActivity implements OnChartG
         setContentView(R.layout.activity_diabetes_pp_graph);
         Intent i = getIntent();
 
-        mChart = (LineChart) findViewById(R.id.chart2);
+        mChart = findViewById(R.id.chart2);
         mChart.setOnChartGestureListener(this);
         mChart.setOnChartValueSelectedListener(this);
         mChart.setDrawGridBackground(false);

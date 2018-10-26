@@ -129,7 +129,7 @@ public class CheckupDetailsActivity extends AppCompatActivity implements SwipeRe
                             //obj = new PassingThrough(diab_fasting, diab_fasting_date, diab_pp, diab_pp_date, diab_random, diab_random_date);
                             checkupstatAdapter = new CheckupStatusAdapter(getBaseContext(), dy);
 
-                            checkupListView = (ListView) findViewById(R.id.list_of_checkupstats);
+                            checkupListView =  findViewById(R.id.list_of_checkupstats);
                             try {
                                 checkupListView.setAdapter(checkupstatAdapter);
                             } catch (NullPointerException e) {

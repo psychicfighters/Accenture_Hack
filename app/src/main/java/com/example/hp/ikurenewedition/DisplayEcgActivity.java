@@ -151,7 +151,7 @@ public class DisplayEcgActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     boolean writtenToDisk = writeResponseBodyToDisk(response.body(), timestamp);
                     if(writtenToDisk){
-                        //Toast.makeText(DisplayEcgActivity.this,"We code hard in this cubicles",Toast.LENGTH_LONG).show();
+                        Toast.makeText(DisplayEcgActivity.this,"We code hard in this cubicles",Toast.LENGTH_LONG).show();
                         PrintHelper photoPrinter = new PrintHelper(getBaseContext());
                         photoPrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
                         Bitmap bitmap = BitmapFactory.decodeFile(ecgpdf.getAbsolutePath());

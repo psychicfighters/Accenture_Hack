@@ -58,7 +58,7 @@ public class DisplayPresActivity extends AppCompatActivity {
         setContentView(R.layout.activity_showimage);
         i = getIntent();
         id = i.getStringExtra("img");
-        img = (ImageView)findViewById(R.id.showimg);
+        img = findViewById(R.id.showimg);
 //        save = findViewById(R.id.save);
 //
 //        save.setOnClickListener(new View.OnClickListener() {
