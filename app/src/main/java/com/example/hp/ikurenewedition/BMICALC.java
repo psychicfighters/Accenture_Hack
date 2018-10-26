@@ -9,7 +9,7 @@ import com.example.hp.ikurenewedition.R;
 
 
 /**
- * Created by hp on 01-02-2018.
+ * Created by nilagnik on 01-02-2018.
  */
 
 public class BMICALC extends AppCompatActivity {

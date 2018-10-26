@@ -38,7 +38,6 @@ public class Diabetes_Graph_PP extends AppCompatActivity implements OnChartGestu
 
 
     int k1, k2, k3;
-    //PassingThrough passingThrough;
     TextView txt;
 
 
@@ -61,7 +60,7 @@ public class Diabetes_Graph_PP extends AppCompatActivity implements OnChartGestu
         setContentView(R.layout.activity_diabetes_pp_graph);
         Intent i = getIntent();
 
-        mChart = (LineChart) findViewById(R.id.chart2);
+        mChart = findViewById(R.id.chart2);
         mChart.setOnChartGestureListener(this);
         mChart.setOnChartValueSelectedListener(this);
         mChart.setDrawGridBackground(false);

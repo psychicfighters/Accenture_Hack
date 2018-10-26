@@ -24,7 +24,7 @@ import com.example.hp.ikurenewedition.fragments.VitalsFragment;
 
 public class OnePerson extends AppCompatActivity {
 
-    private final String LOG_TAG = MainActivity.class.getSimpleName();
+    //private final String LOG_TAG = MainActivity.class.getSimpleName();
 
     // Titles of the individual pages (displayed in tabs)
     private final String[] PAGE_TITLES = new String[]{

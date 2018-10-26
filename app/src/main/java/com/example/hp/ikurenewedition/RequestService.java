@@ -141,8 +141,7 @@ public class RequestService extends AppCompatActivity {
                             && cardView4.getVisibility() == View.GONE && cardView5.getVisibility() == View.GONE) {
                         cardView6.setVisibility(View.VISIBLE);
                     }
-                } catch (Exception e) { //this generic but you can control another types of exception
-                    // look the origin of excption
+                } catch (Exception e) {
                 }
 
             }

@@ -85,12 +85,12 @@ public class NetworkActivity extends AppCompatActivity implements SwipeRefreshLa
                 startActivity(k);
             }
         });
-        card_no = (TextView) findViewById(R.id.serve1);
+        card_no =  findViewById(R.id.serve1);
         card_no.setText(patient);
         //Toast.makeText(this, patient, Toast.LENGTH_LONG).show();
         //retrofitRepository = new RetrofitRepository();
         //callAPI();
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout1);
+        swipeRefreshLayout =  findViewById(R.id.swipe_refresh_layout1);
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setColorSchemeResources(
                 R.color.colorPrimaryDark,
@@ -280,27 +280,6 @@ void execute(){
 
 
 
-//    @Override
-//    public void onBackPressed() {
-//        //finish();
-//        if(no_of_hits == 0){
-//            no_of_hits ++;
-//            Toast.makeText(NetworkActivity.this,"Hit once again to Exit",Toast.LENGTH_SHORT).show();
-//
-//        }
-//        else if(no_of_hits > 0) {
-//            dy = null;
-//            notesAdapter = null;
-//            //startActivity(new Intent(this,MainActivity.class));
-//            //finish();
-//            super.onBackPressed();
-//        }
-//
-//    }
-    /*static  String getDateString(long millis){
-        SimpleDateFormat format=new SimpleDateFormat("EEE, d MMM yyyy 'at' HH:mm:ss z");
-        return format.format(millis);
-    }*/
 
 
 }

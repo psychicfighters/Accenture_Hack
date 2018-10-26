@@ -47,12 +47,12 @@ public class AfterSplash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         i = getIntent();
         editText = findViewById(R.id.edittext);
         item = findViewById(R.id.action_settings);
-        buttonScan = (Button) findViewById(R.id.button);
+        buttonScan = findViewById(R.id.button);
         qrScan = new IntentIntegrator(this);
         this.getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
@@ -87,10 +87,11 @@ public class AfterSplash extends AppCompatActivity {
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
                 finish();
-                //Toast.makeText(this, "Result Found", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Result Found", Toast.LENGTH_LONG).show();
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
 }
+//creadted by amit
